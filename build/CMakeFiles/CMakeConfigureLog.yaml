@@ -1,0 +1,762 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/cmake-3.30.5-igar7ts/share/cmake-3.30/Modules/CMakeDetermineSystem.cmake:205 (message)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      The system is: Linux - 5.14.21-150400.24.55-default - x86_64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/cmake-3.30.5-igar7ts/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/cmake-3.30.5-igar7ts/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/cmake-3.30.5-igar7ts/share/cmake-3.30/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: /opt/aurora/24.347.0/oneapi/compiler/latest/bin/icpx 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+      
+      The CXX compiler identification is IntelLLVM, found in:
+        /home/cluangrath/colin_itt/build/CMakeFiles/3.30.5/CompilerIdCXX/a.out
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/cmake-3.30.5-igar7ts/share/cmake-3.30/Modules/CMakeDetermineCompilerABI.cmake:74 (try_compile)"
+      - "/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/cmake-3.30.5-igar7ts/share/cmake-3.30/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "/home/cluangrath/colin_itt/build/CMakeFiles/CMakeScratch/TryCompile-8yJVNK"
+      binary: "/home/cluangrath/colin_itt/build/CMakeFiles/CMakeScratch/TryCompile-8yJVNK"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g -Rno-debug-disables-optimization"
+      CMAKE_CXX_SCAN_FOR_MODULES: "OFF"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/home/cluangrath/colin_itt/build/CMakeFiles/CMakeScratch/TryCompile-8yJVNK'
+        
+        Run Build Command(s): /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/cmake-3.30.5-igar7ts/bin/cmake -E env VERBOSE=1 /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gmake-4.4.1-wza7sk4/bin/gmake -f Makefile cmTC_d06d7/fast
+        /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gmake-4.4.1-wza7sk4/bin/gmake  -f CMakeFiles/cmTC_d06d7.dir/build.make CMakeFiles/cmTC_d06d7.dir/build
+        gmake[1]: Entering directory '/home/cluangrath/colin_itt/build/CMakeFiles/CMakeScratch/TryCompile-8yJVNK'
+        Building CXX object CMakeFiles/cmTC_d06d7.dir/CMakeCXXCompilerABI.cpp.o
+        /opt/aurora/24.347.0/oneapi/compiler/latest/bin/icpx   -v -MD -MT CMakeFiles/cmTC_d06d7.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_d06d7.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_d06d7.dir/CMakeCXXCompilerABI.cpp.o -c /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/cmake-3.30.5-igar7ts/share/cmake-3.30/Modules/CMakeCXXCompilerABI.cpp
+        Intel(R) oneAPI DPC++/C++ Compiler 2025.0.4 (2025.0.4.20241205)
+        Target: x86_64-unknown-linux-gnu
+        Thread model: posix
+        InstalledDir: /opt/aurora/24.347.0/oneapi/compiler/2025.0/bin/compiler
+        Configuration file: /opt/aurora/24.347.0/oneapi/compiler/2025.0/bin/compiler/../icpx.cfg
+        Found candidate GCC installation: /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gcc-13.3.0-4enwbrb/lib/gcc/x86_64-pc-linux-gnu/13.3.0
+        Selected GCC installation: /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gcc-13.3.0-4enwbrb/lib/gcc/x86_64-pc-linux-gnu/13.3.0
+        Candidate multilib: .;@m64
+        Selected multilib: .;@m64
+         (in-process)
+         "/opt/aurora/24.347.0/oneapi/compiler/2025.0/bin/compiler/clang" -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model static -fveclib=SVML -faltmathlib=SVMLAltMathLibrary -mframe-pointer=none -fapprox-func -funsafe-math-optimizations -fno-signed-zeros -mreassociate -freciprocal-math -fdenormal-fp-math=preserve-sign,preserve-sign -ffp-contract=fast -fno-rounding-math -complex-range=promoted -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -mllvm -x86-enable-unaligned-vector-move=true -tune-cpu generic -debugger-tuning=gdb -fdebug-compilation-dir=/home/cluangrath/colin_itt/build/CMakeFiles/CMakeScratch/TryCompile-8yJVNK -v -fcoverage-compilation-dir=/home/cluangrath/colin_itt/build/CMakeFiles/CMakeScratch/TryCompile-8yJVNK -fclang-abi-compat=17 -resource-dir /opt/aurora/24.347.0/oneapi/compiler/2025.0/lib/clang/19 -dependency-file CMakeFiles/cmTC_d06d7.dir/CMakeCXXCompilerABI.cpp.o.d -MT CMakeFiles/cmTC_d06d7.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -I/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/python-3.10.14-c4ipjly/include -I/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/sqlite-3.46.0-w5wc5lh/include -I/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gdbm-1.23-cxbw4jn/include -I/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/expat-2.6.4-7j6nhb6/include -I/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/libbsd-0.12.2-wxndujc/include -I/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/libmd-1.0.4-q6tzwyj/include -I/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/bzip2-1.0.8-i5o442p/include -I/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/oneapi-2025.0.5/mpich-develop-git.6037a7a-sxnhr7p/include -I/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/oneapi-2025.0.5/yaksa-0.3-7ks5f26/include -I/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/oneapi-2025.0.5/hwloc-2.11.3-mpich-g7c7dzn/include -I/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/libxml2-2.13.5-jxhkqdj/include -I/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/libiconv-1.17-jjpb4sl/include -I/opt/aurora/24.347.0/support/libraries/khronos/default/include -I/opt/aurora/24.347.0/oneapi/pti/latest/include -I/opt/aurora/24.347.0/oneapi/umf/latest/include -I/opt/aurora/24.347.0/oneapi/ipp/latest/include -I/opt/aurora/24.347.0/oneapi/ippcp/latest/include -I/opt/aurora/24.347.0/oneapi/dpcpp-ct/latest/include -I/opt/aurora/24.347.0/oneapi/dpl/latest/include -I/opt/aurora/24.347.0/oneapi/ccl/latest/include -I/opt/aurora/24.347.0/oneapi/dal/latest/include/dal -I/opt/aurora/24.347.0/oneapi/dnnl/latest/include -I/opt/aurora/24.347.0/oneapi/tbb/latest/include -I/opt/aurora/24.347.0/oneapi/mkl/latest/include -I/opt/aurora/24.347.0/oneapi/dev-utilities/latest/include -I/opt/aurora/24.347.0/oneapi/compiler/latest/include -I/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gcc-13.3.0-4enwbrb/include -I/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/mpc-1.3.1-rdrlvsl/include -I/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/mpfr-4.2.1-gkcdl5w/include -I/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gmp-6.3.0-mtokfaw/include -c-isystem /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/python-3.10.14-c4ipjly/include -c-isystem /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/sqlite-3.46.0-w5wc5lh/include -c-isystem /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gdbm-1.23-cxbw4jn/include -c-isystem /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/expat-2.6.4-7j6nhb6/include -c-isystem /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/libbsd-0.12.2-wxndujc/include -c-isystem /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/libmd-1.0.4-q6tzwyj/include -c-isystem /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/bzip2-1.0.8-i5o442p/include -c-isystem /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/oneapi-2025.0.5/mpich-develop-git.6037a7a-sxnhr7p/include -c-isystem /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/oneapi-2025.0.5/yaksa-0.3-7ks5f26/include -c-isystem /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/oneapi-2025.0.5/hwloc-2.11.3-mpich-g7c7dzn/include -c-isystem /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/libxml2-2.13.5-jxhkqdj/include -c-isystem /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/libiconv-1.17-jjpb4sl/include -c-isystem /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gcc-13.3.0-4enwbrb/include -c-isystem /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/mpc-1.3.1-rdrlvsl/include -c-isystem /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/mpfr-4.2.1-gkcdl5w/include -c-isystem /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gmp-6.3.0-mtokfaw/include -cxx-isystem /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/python-3.10.14-c4ipjly/include -cxx-isystem /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/sqlite-3.46.0-w5wc5lh/include -cxx-isystem /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gdbm-1.23-cxbw4jn/include -cxx-isystem /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/expat-2.6.4-7j6nhb6/include -cxx-isystem /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/libbsd-0.12.2-wxndujc/include -cxx-isystem /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/libmd-1.0.4-q6tzwyj/include -cxx-isystem /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/bzip2-1.0.8-i5o442p/include -cxx-isystem /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/oneapi-2025.0.5/mpich-develop-git.6037a7a-sxnhr7p/include -cxx-isystem /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/oneapi-2025.0.5/yaksa-0.3-7ks5f26/include -cxx-isystem /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/oneapi-2025.0.5/hwloc-2.11.3-mpich-g7c7dzn/include -cxx-isystem /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/libxml2-2.13.5-jxhkqdj/include -cxx-isystem /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/libiconv-1.17-jjpb4sl/include -cxx-isystem /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gcc-13.3.0-4enwbrb/include -cxx-isystem /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/mpc-1.3.1-rdrlvsl/include -cxx-isystem /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/mpfr-4.2.1-gkcdl5w/include -cxx-isystem /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gmp-6.3.0-mtokfaw/include -internal-isystem /opt/aurora/24.347.0/oneapi/compiler/2025.0/bin/compiler/../../opt/compiler/include -internal-isystem /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gcc-13.3.0-4enwbrb/lib/gcc/x86_64-pc-linux-gnu/13.3.0/../../../../include/c++/13.3.0 -internal-isystem /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gcc-13.3.0-4enwbrb/lib/gcc/x86_64-pc-linux-gnu/13.3.0/../../../../include/c++/13.3.0/x86_64-pc-linux-gnu -internal-isystem /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gcc-13.3.0-4enwbrb/lib/gcc/x86_64-pc-linux-gnu/13.3.0/../../../../include/c++/13.3.0/backward -internal-isystem /opt/aurora/24.347.0/oneapi/compiler/2025.0/lib/clang/19/include -internal-isystem /usr/local/include -internal-isystem /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gcc-13.3.0-4enwbrb/lib/gcc/x86_64-pc-linux-gnu/13.3.0/../../../../x86_64-pc-linux-gnu/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -O2 -fdeprecated-macro -ferror-limit 19 -fheinous-gnu-extensions -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -vectorize-loops -vectorize-slp -mllvm -disable-hir-generate-mkl-call -mllvm -loopopt=1 -floopopt-pipeline=light -mllvm -intel-abi-compatible=true -D__GCC_HAVE_DWARF2_CFI_ASM=1 -fintel-compatibility -fintel-libirc-allowed -fintel-libimf-allowed -o CMakeFiles/cmTC_d06d7.dir/CMakeCXXCompilerABI.cpp.o -x c++ /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/cmake-3.30.5-igar7ts/share/cmake-3.30/Modules/CMakeCXXCompilerABI.cpp
+        clang -cc1 version 19.0.0git based upon LLVM 19.0.0git default target x86_64-unknown-linux-gnu
+        ignoring nonexistent directory "/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gcc-13.3.0-4enwbrb/lib/gcc/x86_64-pc-linux-gnu/13.3.0/../../../../x86_64-pc-linux-gnu/include"
+        ignoring nonexistent directory "/include"
+        ignoring duplicate directory "/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/python-3.10.14-c4ipjly/include"
+          as it is a non-system directory that duplicates a system directory
+        ignoring duplicate directory "/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/sqlite-3.46.0-w5wc5lh/include"
+          as it is a non-system directory that duplicates a system directory
+        ignoring duplicate directory "/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gdbm-1.23-cxbw4jn/include"
+          as it is a non-system directory that duplicates a system directory
+        ignoring duplicate directory "/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/expat-2.6.4-7j6nhb6/include"
+          as it is a non-system directory that duplicates a system directory
+        ignoring duplicate directory "/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/libbsd-0.12.2-wxndujc/include"
+          as it is a non-system directory that duplicates a system directory
+        ignoring duplicate directory "/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/libmd-1.0.4-q6tzwyj/include"
+          as it is a non-system directory that duplicates a system directory
+        ignoring duplicate directory "/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/bzip2-1.0.8-i5o442p/include"
+          as it is a non-system directory that duplicates a system directory
+        ignoring duplicate directory "/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/oneapi-2025.0.5/mpich-develop-git.6037a7a-sxnhr7p/include"
+          as it is a non-system directory that duplicates a system directory
+        ignoring duplicate directory "/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/oneapi-2025.0.5/yaksa-0.3-7ks5f26/include"
+          as it is a non-system directory that duplicates a system directory
+        ignoring duplicate directory "/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/oneapi-2025.0.5/hwloc-2.11.3-mpich-g7c7dzn/include"
+          as it is a non-system directory that duplicates a system directory
+        ignoring duplicate directory "/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/libxml2-2.13.5-jxhkqdj/include"
+          as it is a non-system directory that duplicates a system directory
+        ignoring duplicate directory "/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/libiconv-1.17-jjpb4sl/include"
+          as it is a non-system directory that duplicates a system directory
+        ignoring duplicate directory "/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gcc-13.3.0-4enwbrb/include"
+          as it is a non-system directory that duplicates a system directory
+        ignoring duplicate directory "/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/mpc-1.3.1-rdrlvsl/include"
+          as it is a non-system directory that duplicates a system directory
+        ignoring duplicate directory "/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/mpfr-4.2.1-gkcdl5w/include"
+          as it is a non-system directory that duplicates a system directory
+        ignoring duplicate directory "/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gmp-6.3.0-mtokfaw/include"
+          as it is a non-system directory that duplicates a system directory
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /opt/aurora/24.347.0/support/libraries/khronos/default/include
+         /opt/aurora/24.347.0/oneapi/pti/latest/include
+         /opt/aurora/24.347.0/oneapi/umf/latest/include
+         /opt/aurora/24.347.0/oneapi/ipp/latest/include
+         /opt/aurora/24.347.0/oneapi/ippcp/latest/include
+         /opt/aurora/24.347.0/oneapi/dpcpp-ct/latest/include
+         /opt/aurora/24.347.0/oneapi/dpl/latest/include
+         /opt/aurora/24.347.0/oneapi/ccl/latest/include
+         /opt/aurora/24.347.0/oneapi/dal/latest/include/dal
+         /opt/aurora/24.347.0/oneapi/dnnl/latest/include
+         /opt/aurora/24.347.0/oneapi/tbb/latest/include
+         /opt/aurora/24.347.0/oneapi/mkl/latest/include
+         /opt/aurora/24.347.0/oneapi/dev-utilities/latest/include
+         /opt/aurora/24.347.0/oneapi/compiler/latest/include
+         /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/python-3.10.14-c4ipjly/include
+         /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/sqlite-3.46.0-w5wc5lh/include
+         /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gdbm-1.23-cxbw4jn/include
+         /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/expat-2.6.4-7j6nhb6/include
+         /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/libbsd-0.12.2-wxndujc/include
+         /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/libmd-1.0.4-q6tzwyj/include
+         /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/bzip2-1.0.8-i5o442p/include
+         /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/oneapi-2025.0.5/mpich-develop-git.6037a7a-sxnhr7p/include
+         /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/oneapi-2025.0.5/yaksa-0.3-7ks5f26/include
+         /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/oneapi-2025.0.5/hwloc-2.11.3-mpich-g7c7dzn/include
+         /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/libxml2-2.13.5-jxhkqdj/include
+         /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/libiconv-1.17-jjpb4sl/include
+         /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gcc-13.3.0-4enwbrb/include
+         /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/mpc-1.3.1-rdrlvsl/include
+         /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/mpfr-4.2.1-gkcdl5w/include
+         /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gmp-6.3.0-mtokfaw/include
+         /opt/aurora/24.347.0/oneapi/compiler/2025.0/bin/compiler/../../opt/compiler/include
+         /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gcc-13.3.0-4enwbrb/lib/gcc/x86_64-pc-linux-gnu/13.3.0/../../../../include/c++/13.3.0
+         /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gcc-13.3.0-4enwbrb/lib/gcc/x86_64-pc-linux-gnu/13.3.0/../../../../include/c++/13.3.0/x86_64-pc-linux-gnu
+         /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gcc-13.3.0-4enwbrb/lib/gcc/x86_64-pc-linux-gnu/13.3.0/../../../../include/c++/13.3.0/backward
+         /opt/aurora/24.347.0/oneapi/compiler/2025.0/lib/clang/19/include
+         /usr/local/include
+         /usr/include
+        End of search list.
+        Linking CXX executable cmTC_d06d7
+        /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/cmake-3.30.5-igar7ts/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d06d7.dir/link.txt --verbose=1
+        /opt/aurora/24.347.0/oneapi/compiler/latest/bin/icpx  -v CMakeFiles/cmTC_d06d7.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_d06d7
+        Intel(R) oneAPI DPC++/C++ Compiler 2025.0.4 (2025.0.4.20241205)
+        Target: x86_64-unknown-linux-gnu
+        Thread model: posix
+        InstalledDir: /opt/aurora/24.347.0/oneapi/compiler/2025.0/bin/compiler
+        Configuration file: /opt/aurora/24.347.0/oneapi/compiler/2025.0/bin/compiler/../icpx.cfg
+        Found candidate GCC installation: /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gcc-13.3.0-4enwbrb/lib/gcc/x86_64-pc-linux-gnu/13.3.0
+        Selected GCC installation: /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gcc-13.3.0-4enwbrb/lib/gcc/x86_64-pc-linux-gnu/13.3.0
+        Candidate multilib: .;@m64
+        Selected multilib: .;@m64
+         "/usr/bin/ld" -z relro --hash-style=both --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_d06d7 /usr/lib/../lib64/crt1.o /usr/lib/../lib64/crti.o /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gcc-13.3.0-4enwbrb/lib/gcc/x86_64-pc-linux-gnu/13.3.0/crtbegin.o -L/opt/aurora/24.347.0/oneapi/compiler/2025.0/bin/compiler/../../lib -L/opt/aurora/24.347.0/oneapi/compiler/2025.0/bin/compiler/../../lib -L/opt/aurora/24.347.0/oneapi/compiler/2025.0/lib/clang/19/lib/x86_64-unknown-linux-gnu -L/opt/aurora/24.347.0/oneapi/compiler/2025.0/bin/compiler/../../lib -L/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gcc-13.3.0-4enwbrb/lib/gcc/x86_64-pc-linux-gnu/13.3.0 -L/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gcc-13.3.0-4enwbrb/lib/gcc/x86_64-pc-linux-gnu/13.3.0/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gcc-13.3.0-4enwbrb/lib/gcc/x86_64-pc-linux-gnu/13.3.0/../../.. -L/opt/aurora/24.347.0/oneapi/compiler/2025.0/bin/compiler/../../lib -L/opt/aurora/24.347.0/oneapi/compiler/2025.0/bin/compiler/../../opt/compiler/lib -L/lib -L/usr/lib -L/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/python-3.10.14-c4ipjly/lib -L/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/sqlite-3.46.0-w5wc5lh/lib -L/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gdbm-1.23-cxbw4jn/lib -L/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/expat-2.6.4-7j6nhb6/lib -L/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/libbsd-0.12.2-wxndujc/lib -L/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/libmd-1.0.4-q6tzwyj/lib -L/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/bzip2-1.0.8-i5o442p/lib -L/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/oneapi-2025.0.5/mpich-develop-git.6037a7a-sxnhr7p/lib -L/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/oneapi-2025.0.5/yaksa-0.3-7ks5f26/lib -L/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/oneapi-2025.0.5/hwloc-2.11.3-mpich-g7c7dzn/lib -L/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/libxml2-2.13.5-jxhkqdj/lib -L/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/libiconv-1.17-jjpb4sl/lib -L/opt/aurora/24.347.0/support/libraries/khronos/default/lib64 -L/opt/aurora/24.347.0/oneapi/pti/latest/lib -L/opt/aurora/24.347.0/oneapi/tcm/latest/lib -L/opt/aurora/24.347.0/oneapi/umf/latest/lib -L/opt/aurora/24.347.0/oneapi/ipp/latest/lib -L/opt/aurora/24.347.0/oneapi/ippcp/latest/lib -L/opt/aurora/24.347.0/oneapi/ccl/latest/lib -L/opt/aurora/24.347.0/oneapi/dal/latest/lib -L/opt/aurora/24.347.0/oneapi/dnnl/latest/lib -L/opt/aurora/24.347.0/oneapi/tbb/latest/lib/intel64/gcc4.8 -L/opt/aurora/24.347.0/oneapi/mkl/latest/lib -L/opt/aurora/24.347.0/oneapi/compiler/latest/lib -L/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gcc-13.3.0-4enwbrb/lib64 -L/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gcc-13.3.0-4enwbrb/lib -L/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/mpc-1.3.1-rdrlvsl/lib -L/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/mpfr-4.2.1-gkcdl5w/lib -L/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gmp-6.3.0-mtokfaw/lib -L/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gcc-runtime-13.3.0-ghotoln/lib CMakeFiles/cmTC_d06d7.dir/CMakeCXXCompilerABI.cpp.o -Bstatic -lsvml -Bdynamic -Bstatic -lirng -Bdynamic -lstdc++ -Bstatic -limf -Bdynamic -lm -lgcc_s -lgcc -Bstatic -lirc -Bdynamic -ldl -lgcc_s -lgcc -lc -lgcc_s -lgcc -Bstatic -lirc_s -Bdynamic /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gcc-13.3.0-4enwbrb/lib/gcc/x86_64-pc-linux-gnu/13.3.0/crtend.o /usr/lib/../lib64/crtn.o
+        gmake[1]: Leaving directory '/home/cluangrath/colin_itt/build/CMakeFiles/CMakeScratch/TryCompile-8yJVNK'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/cmake-3.30.5-igar7ts/share/cmake-3.30/Modules/CMakeDetermineCompilerABI.cmake:182 (message)"
+      - "/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/cmake-3.30.5-igar7ts/share/cmake-3.30/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed CXX implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/opt/aurora/24.347.0/support/libraries/khronos/default/include]
+          add: [/opt/aurora/24.347.0/oneapi/pti/latest/include]
+          add: [/opt/aurora/24.347.0/oneapi/umf/latest/include]
+          add: [/opt/aurora/24.347.0/oneapi/ipp/latest/include]
+          add: [/opt/aurora/24.347.0/oneapi/ippcp/latest/include]
+          add: [/opt/aurora/24.347.0/oneapi/dpcpp-ct/latest/include]
+          add: [/opt/aurora/24.347.0/oneapi/dpl/latest/include]
+          add: [/opt/aurora/24.347.0/oneapi/ccl/latest/include]
+          add: [/opt/aurora/24.347.0/oneapi/dal/latest/include/dal]
+          add: [/opt/aurora/24.347.0/oneapi/dnnl/latest/include]
+          add: [/opt/aurora/24.347.0/oneapi/tbb/latest/include]
+          add: [/opt/aurora/24.347.0/oneapi/mkl/latest/include]
+          add: [/opt/aurora/24.347.0/oneapi/dev-utilities/latest/include]
+          add: [/opt/aurora/24.347.0/oneapi/compiler/latest/include]
+          add: [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/python-3.10.14-c4ipjly/include]
+          add: [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/sqlite-3.46.0-w5wc5lh/include]
+          add: [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gdbm-1.23-cxbw4jn/include]
+          add: [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/expat-2.6.4-7j6nhb6/include]
+          add: [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/libbsd-0.12.2-wxndujc/include]
+          add: [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/libmd-1.0.4-q6tzwyj/include]
+          add: [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/bzip2-1.0.8-i5o442p/include]
+          add: [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/oneapi-2025.0.5/mpich-develop-git.6037a7a-sxnhr7p/include]
+          add: [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/oneapi-2025.0.5/yaksa-0.3-7ks5f26/include]
+          add: [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/oneapi-2025.0.5/hwloc-2.11.3-mpich-g7c7dzn/include]
+          add: [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/libxml2-2.13.5-jxhkqdj/include]
+          add: [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/libiconv-1.17-jjpb4sl/include]
+          add: [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gcc-13.3.0-4enwbrb/include]
+          add: [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/mpc-1.3.1-rdrlvsl/include]
+          add: [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/mpfr-4.2.1-gkcdl5w/include]
+          add: [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gmp-6.3.0-mtokfaw/include]
+          add: [/opt/aurora/24.347.0/oneapi/compiler/2025.0/bin/compiler/../../opt/compiler/include]
+          add: [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gcc-13.3.0-4enwbrb/lib/gcc/x86_64-pc-linux-gnu/13.3.0/../../../../include/c++/13.3.0]
+          add: [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gcc-13.3.0-4enwbrb/lib/gcc/x86_64-pc-linux-gnu/13.3.0/../../../../include/c++/13.3.0/x86_64-pc-linux-gnu]
+          add: [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gcc-13.3.0-4enwbrb/lib/gcc/x86_64-pc-linux-gnu/13.3.0/../../../../include/c++/13.3.0/backward]
+          add: [/opt/aurora/24.347.0/oneapi/compiler/2025.0/lib/clang/19/include]
+          add: [/usr/local/include]
+          add: [/usr/include]
+        end of search list found
+        collapse include dir [/opt/aurora/24.347.0/support/libraries/khronos/default/include] ==> [/opt/aurora/24.347.0/support/libraries/khronos/default/include]
+        collapse include dir [/opt/aurora/24.347.0/oneapi/pti/latest/include] ==> [/opt/aurora/24.347.0/oneapi/pti/latest/include]
+        collapse include dir [/opt/aurora/24.347.0/oneapi/umf/latest/include] ==> [/opt/aurora/24.347.0/oneapi/umf/latest/include]
+        collapse include dir [/opt/aurora/24.347.0/oneapi/ipp/latest/include] ==> [/opt/aurora/24.347.0/oneapi/ipp/latest/include]
+        collapse include dir [/opt/aurora/24.347.0/oneapi/ippcp/latest/include] ==> [/opt/aurora/24.347.0/oneapi/ippcp/latest/include]
+        collapse include dir [/opt/aurora/24.347.0/oneapi/dpcpp-ct/latest/include] ==> [/opt/aurora/24.347.0/oneapi/dpcpp-ct/latest/include]
+        collapse include dir [/opt/aurora/24.347.0/oneapi/dpl/latest/include] ==> [/opt/aurora/24.347.0/oneapi/dpl/latest/include]
+        collapse include dir [/opt/aurora/24.347.0/oneapi/ccl/latest/include] ==> [/opt/aurora/24.347.0/oneapi/ccl/latest/include]
+        collapse include dir [/opt/aurora/24.347.0/oneapi/dal/latest/include/dal] ==> [/opt/aurora/24.347.0/oneapi/dal/latest/include/dal]
+        collapse include dir [/opt/aurora/24.347.0/oneapi/dnnl/latest/include] ==> [/opt/aurora/24.347.0/oneapi/dnnl/latest/include]
+        collapse include dir [/opt/aurora/24.347.0/oneapi/tbb/latest/include] ==> [/opt/aurora/24.347.0/oneapi/tbb/latest/include]
+        collapse include dir [/opt/aurora/24.347.0/oneapi/mkl/latest/include] ==> [/opt/aurora/24.347.0/oneapi/mkl/latest/include]
+        collapse include dir [/opt/aurora/24.347.0/oneapi/dev-utilities/latest/include] ==> [/opt/aurora/24.347.0/oneapi/dev-utilities/latest/include]
+        collapse include dir [/opt/aurora/24.347.0/oneapi/compiler/latest/include] ==> [/opt/aurora/24.347.0/oneapi/compiler/latest/include]
+        collapse include dir [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/python-3.10.14-c4ipjly/include] ==> [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/python-3.10.14-c4ipjly/include]
+        collapse include dir [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/sqlite-3.46.0-w5wc5lh/include] ==> [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/sqlite-3.46.0-w5wc5lh/include]
+        collapse include dir [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gdbm-1.23-cxbw4jn/include] ==> [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gdbm-1.23-cxbw4jn/include]
+        collapse include dir [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/expat-2.6.4-7j6nhb6/include] ==> [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/expat-2.6.4-7j6nhb6/include]
+        collapse include dir [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/libbsd-0.12.2-wxndujc/include] ==> [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/libbsd-0.12.2-wxndujc/include]
+        collapse include dir [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/libmd-1.0.4-q6tzwyj/include] ==> [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/libmd-1.0.4-q6tzwyj/include]
+        collapse include dir [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/bzip2-1.0.8-i5o442p/include] ==> [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/bzip2-1.0.8-i5o442p/include]
+        collapse include dir [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/oneapi-2025.0.5/mpich-develop-git.6037a7a-sxnhr7p/include] ==> [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/oneapi-2025.0.5/mpich-develop-git.6037a7a-sxnhr7p/include]
+        collapse include dir [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/oneapi-2025.0.5/yaksa-0.3-7ks5f26/include] ==> [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/oneapi-2025.0.5/yaksa-0.3-7ks5f26/include]
+        collapse include dir [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/oneapi-2025.0.5/hwloc-2.11.3-mpich-g7c7dzn/include] ==> [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/oneapi-2025.0.5/hwloc-2.11.3-mpich-g7c7dzn/include]
+        collapse include dir [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/libxml2-2.13.5-jxhkqdj/include] ==> [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/libxml2-2.13.5-jxhkqdj/include]
+        collapse include dir [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/libiconv-1.17-jjpb4sl/include] ==> [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/libiconv-1.17-jjpb4sl/include]
+        collapse include dir [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gcc-13.3.0-4enwbrb/include] ==> [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gcc-13.3.0-4enwbrb/include]
+        collapse include dir [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/mpc-1.3.1-rdrlvsl/include] ==> [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/mpc-1.3.1-rdrlvsl/include]
+        collapse include dir [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/mpfr-4.2.1-gkcdl5w/include] ==> [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/mpfr-4.2.1-gkcdl5w/include]
+        collapse include dir [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gmp-6.3.0-mtokfaw/include] ==> [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gmp-6.3.0-mtokfaw/include]
+        collapse include dir [/opt/aurora/24.347.0/oneapi/compiler/2025.0/bin/compiler/../../opt/compiler/include] ==> [/opt/aurora/24.347.0/oneapi/compiler/2025.0/opt/compiler/include]
+        collapse include dir [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gcc-13.3.0-4enwbrb/lib/gcc/x86_64-pc-linux-gnu/13.3.0/../../../../include/c++/13.3.0] ==> [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gcc-13.3.0-4enwbrb/include/c++/13.3.0]
+        collapse include dir [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gcc-13.3.0-4enwbrb/lib/gcc/x86_64-pc-linux-gnu/13.3.0/../../../../include/c++/13.3.0/x86_64-pc-linux-gnu] ==> [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gcc-13.3.0-4enwbrb/include/c++/13.3.0/x86_64-pc-linux-gnu]
+        collapse include dir [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gcc-13.3.0-4enwbrb/lib/gcc/x86_64-pc-linux-gnu/13.3.0/../../../../include/c++/13.3.0/backward] ==> [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gcc-13.3.0-4enwbrb/include/c++/13.3.0/backward]
+        collapse include dir [/opt/aurora/24.347.0/oneapi/compiler/2025.0/lib/clang/19/include] ==> [/opt/aurora/24.347.0/oneapi/compiler/2025.0/lib/clang/19/include]
+        collapse include dir [/usr/local/include] ==> [/usr/local/include]
+        collapse include dir [/usr/include] ==> [/usr/include]
+        implicit include dirs: [/opt/aurora/24.347.0/support/libraries/khronos/default/include;/opt/aurora/24.347.0/oneapi/pti/latest/include;/opt/aurora/24.347.0/oneapi/umf/latest/include;/opt/aurora/24.347.0/oneapi/ipp/latest/include;/opt/aurora/24.347.0/oneapi/ippcp/latest/include;/opt/aurora/24.347.0/oneapi/dpcpp-ct/latest/include;/opt/aurora/24.347.0/oneapi/dpl/latest/include;/opt/aurora/24.347.0/oneapi/ccl/latest/include;/opt/aurora/24.347.0/oneapi/dal/latest/include/dal;/opt/aurora/24.347.0/oneapi/dnnl/latest/include;/opt/aurora/24.347.0/oneapi/tbb/latest/include;/opt/aurora/24.347.0/oneapi/mkl/latest/include;/opt/aurora/24.347.0/oneapi/dev-utilities/latest/include;/opt/aurora/24.347.0/oneapi/compiler/latest/include;/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/python-3.10.14-c4ipjly/include;/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/sqlite-3.46.0-w5wc5lh/include;/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gdbm-1.23-cxbw4jn/include;/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/expat-2.6.4-7j6nhb6/include;/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/libbsd-0.12.2-wxndujc/include;/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/libmd-1.0.4-q6tzwyj/include;/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/bzip2-1.0.8-i5o442p/include;/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/oneapi-2025.0.5/mpich-develop-git.6037a7a-sxnhr7p/include;/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/oneapi-2025.0.5/yaksa-0.3-7ks5f26/include;/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/oneapi-2025.0.5/hwloc-2.11.3-mpich-g7c7dzn/include;/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/libxml2-2.13.5-jxhkqdj/include;/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/libiconv-1.17-jjpb4sl/include;/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gcc-13.3.0-4enwbrb/include;/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/mpc-1.3.1-rdrlvsl/include;/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/mpfr-4.2.1-gkcdl5w/include;/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gmp-6.3.0-mtokfaw/include;/opt/aurora/24.347.0/oneapi/compiler/2025.0/opt/compiler/include;/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gcc-13.3.0-4enwbrb/include/c++/13.3.0;/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gcc-13.3.0-4enwbrb/include/c++/13.3.0/x86_64-pc-linux-gnu;/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gcc-13.3.0-4enwbrb/include/c++/13.3.0/backward;/opt/aurora/24.347.0/oneapi/compiler/2025.0/lib/clang/19/include;/usr/local/include;/usr/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/cmake-3.30.5-igar7ts/share/cmake-3.30/Modules/CMakeDetermineCompilerABI.cmake:218 (message)"
+      - "/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/cmake-3.30.5-igar7ts/share/cmake-3.30/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?))("|,| |$)]
+        ignore line: [Change Dir: '/home/cluangrath/colin_itt/build/CMakeFiles/CMakeScratch/TryCompile-8yJVNK']
+        ignore line: []
+        ignore line: [Run Build Command(s): /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/cmake-3.30.5-igar7ts/bin/cmake -E env VERBOSE=1 /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gmake-4.4.1-wza7sk4/bin/gmake -f Makefile cmTC_d06d7/fast]
+        ignore line: [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gmake-4.4.1-wza7sk4/bin/gmake  -f CMakeFiles/cmTC_d06d7.dir/build.make CMakeFiles/cmTC_d06d7.dir/build]
+        ignore line: [gmake[1]: Entering directory '/home/cluangrath/colin_itt/build/CMakeFiles/CMakeScratch/TryCompile-8yJVNK']
+        ignore line: [Building CXX object CMakeFiles/cmTC_d06d7.dir/CMakeCXXCompilerABI.cpp.o]
+        ignore line: [/opt/aurora/24.347.0/oneapi/compiler/latest/bin/icpx   -v -MD -MT CMakeFiles/cmTC_d06d7.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_d06d7.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_d06d7.dir/CMakeCXXCompilerABI.cpp.o -c /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/cmake-3.30.5-igar7ts/share/cmake-3.30/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Intel(R) oneAPI DPC++/C++ Compiler 2025.0.4 (2025.0.4.20241205)]
+        ignore line: [Target: x86_64-unknown-linux-gnu]
+        ignore line: [Thread model: posix]
+        ignore line: [InstalledDir: /opt/aurora/24.347.0/oneapi/compiler/2025.0/bin/compiler]
+        ignore line: [Configuration file: /opt/aurora/24.347.0/oneapi/compiler/2025.0/bin/compiler/../icpx.cfg]
+        ignore line: [Found candidate GCC installation: /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gcc-13.3.0-4enwbrb/lib/gcc/x86_64-pc-linux-gnu/13.3.0]
+        ignore line: [Selected GCC installation: /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gcc-13.3.0-4enwbrb/lib/gcc/x86_64-pc-linux-gnu/13.3.0]
+        ignore line: [Candidate multilib: .]
+        ignore line: [@m64]
+        ignore line: [Selected multilib: .]
+        ignore line: [@m64]
+        ignore line: [ (in-process)]
+        ignore line: [ "/opt/aurora/24.347.0/oneapi/compiler/2025.0/bin/compiler/clang" -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model static -fveclib=SVML -faltmathlib=SVMLAltMathLibrary -mframe-pointer=none -fapprox-func -funsafe-math-optimizations -fno-signed-zeros -mreassociate -freciprocal-math -fdenormal-fp-math=preserve-sign preserve-sign -ffp-contract=fast -fno-rounding-math -complex-range=promoted -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -mllvm -x86-enable-unaligned-vector-move=true -tune-cpu generic -debugger-tuning=gdb -fdebug-compilation-dir=/home/cluangrath/colin_itt/build/CMakeFiles/CMakeScratch/TryCompile-8yJVNK -v -fcoverage-compilation-dir=/home/cluangrath/colin_itt/build/CMakeFiles/CMakeScratch/TryCompile-8yJVNK -fclang-abi-compat=17 -resource-dir /opt/aurora/24.347.0/oneapi/compiler/2025.0/lib/clang/19 -dependency-file CMakeFiles/cmTC_d06d7.dir/CMakeCXXCompilerABI.cpp.o.d -MT CMakeFiles/cmTC_d06d7.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -I/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/python-3.10.14-c4ipjly/include -I/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/sqlite-3.46.0-w5wc5lh/include -I/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gdbm-1.23-cxbw4jn/include -I/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/expat-2.6.4-7j6nhb6/include -I/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/libbsd-0.12.2-wxndujc/include -I/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/libmd-1.0.4-q6tzwyj/include -I/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/bzip2-1.0.8-i5o442p/include -I/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/oneapi-2025.0.5/mpich-develop-git.6037a7a-sxnhr7p/include -I/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/oneapi-2025.0.5/yaksa-0.3-7ks5f26/include -I/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/oneapi-2025.0.5/hwloc-2.11.3-mpich-g7c7dzn/include -I/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/libxml2-2.13.5-jxhkqdj/include -I/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/libiconv-1.17-jjpb4sl/include -I/opt/aurora/24.347.0/support/libraries/khronos/default/include -I/opt/aurora/24.347.0/oneapi/pti/latest/include -I/opt/aurora/24.347.0/oneapi/umf/latest/include -I/opt/aurora/24.347.0/oneapi/ipp/latest/include -I/opt/aurora/24.347.0/oneapi/ippcp/latest/include -I/opt/aurora/24.347.0/oneapi/dpcpp-ct/latest/include -I/opt/aurora/24.347.0/oneapi/dpl/latest/include -I/opt/aurora/24.347.0/oneapi/ccl/latest/include -I/opt/aurora/24.347.0/oneapi/dal/latest/include/dal -I/opt/aurora/24.347.0/oneapi/dnnl/latest/include -I/opt/aurora/24.347.0/oneapi/tbb/latest/include -I/opt/aurora/24.347.0/oneapi/mkl/latest/include -I/opt/aurora/24.347.0/oneapi/dev-utilities/latest/include -I/opt/aurora/24.347.0/oneapi/compiler/latest/include -I/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gcc-13.3.0-4enwbrb/include -I/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/mpc-1.3.1-rdrlvsl/include -I/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/mpfr-4.2.1-gkcdl5w/include -I/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gmp-6.3.0-mtokfaw/include -c-isystem /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/python-3.10.14-c4ipjly/include -c-isystem /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/sqlite-3.46.0-w5wc5lh/include -c-isystem /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gdbm-1.23-cxbw4jn/include -c-isystem /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/expat-2.6.4-7j6nhb6/include -c-isystem /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/libbsd-0.12.2-wxndujc/include -c-isystem /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/libmd-1.0.4-q6tzwyj/include -c-isystem /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/bzip2-1.0.8-i5o442p/include -c-isystem /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/oneapi-2025.0.5/mpich-develop-git.6037a7a-sxnhr7p/include -c-isystem /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/oneapi-2025.0.5/yaksa-0.3-7ks5f26/include -c-isystem /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/oneapi-2025.0.5/hwloc-2.11.3-mpich-g7c7dzn/include -c-isystem /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/libxml2-2.13.5-jxhkqdj/include -c-isystem /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/libiconv-1.17-jjpb4sl/include -c-isystem /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gcc-13.3.0-4enwbrb/include -c-isystem /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/mpc-1.3.1-rdrlvsl/include -c-isystem /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/mpfr-4.2.1-gkcdl5w/include -c-isystem /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gmp-6.3.0-mtokfaw/include -cxx-isystem /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/python-3.10.14-c4ipjly/include -cxx-isystem /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/sqlite-3.46.0-w5wc5lh/include -cxx-isystem /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gdbm-1.23-cxbw4jn/include -cxx-isystem /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/expat-2.6.4-7j6nhb6/include -cxx-isystem /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/libbsd-0.12.2-wxndujc/include -cxx-isystem /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/libmd-1.0.4-q6tzwyj/include -cxx-isystem /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/bzip2-1.0.8-i5o442p/include -cxx-isystem /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/oneapi-2025.0.5/mpich-develop-git.6037a7a-sxnhr7p/include -cxx-isystem /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/oneapi-2025.0.5/yaksa-0.3-7ks5f26/include -cxx-isystem /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/oneapi-2025.0.5/hwloc-2.11.3-mpich-g7c7dzn/include -cxx-isystem /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/libxml2-2.13.5-jxhkqdj/include -cxx-isystem /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/libiconv-1.17-jjpb4sl/include -cxx-isystem /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gcc-13.3.0-4enwbrb/include -cxx-isystem /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/mpc-1.3.1-rdrlvsl/include -cxx-isystem /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/mpfr-4.2.1-gkcdl5w/include -cxx-isystem /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gmp-6.3.0-mtokfaw/include -internal-isystem /opt/aurora/24.347.0/oneapi/compiler/2025.0/bin/compiler/../../opt/compiler/include -internal-isystem /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gcc-13.3.0-4enwbrb/lib/gcc/x86_64-pc-linux-gnu/13.3.0/../../../../include/c++/13.3.0 -internal-isystem /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gcc-13.3.0-4enwbrb/lib/gcc/x86_64-pc-linux-gnu/13.3.0/../../../../include/c++/13.3.0/x86_64-pc-linux-gnu -internal-isystem /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gcc-13.3.0-4enwbrb/lib/gcc/x86_64-pc-linux-gnu/13.3.0/../../../../include/c++/13.3.0/backward -internal-isystem /opt/aurora/24.347.0/oneapi/compiler/2025.0/lib/clang/19/include -internal-isystem /usr/local/include -internal-isystem /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gcc-13.3.0-4enwbrb/lib/gcc/x86_64-pc-linux-gnu/13.3.0/../../../../x86_64-pc-linux-gnu/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -O2 -fdeprecated-macro -ferror-limit 19 -fheinous-gnu-extensions -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -vectorize-loops -vectorize-slp -mllvm -disable-hir-generate-mkl-call -mllvm -loopopt=1 -floopopt-pipeline=light -mllvm -intel-abi-compatible=true -D__GCC_HAVE_DWARF2_CFI_ASM=1 -fintel-compatibility -fintel-libirc-allowed -fintel-libimf-allowed -o CMakeFiles/cmTC_d06d7.dir/CMakeCXXCompilerABI.cpp.o -x c++ /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/cmake-3.30.5-igar7ts/share/cmake-3.30/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [clang -cc1 version 19.0.0git based upon LLVM 19.0.0git default target x86_64-unknown-linux-gnu]
+        ignore line: [ignoring nonexistent directory "/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gcc-13.3.0-4enwbrb/lib/gcc/x86_64-pc-linux-gnu/13.3.0/../../../../x86_64-pc-linux-gnu/include"]
+        ignore line: [ignoring nonexistent directory "/include"]
+        ignore line: [ignoring duplicate directory "/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/python-3.10.14-c4ipjly/include"]
+        ignore line: [  as it is a non-system directory that duplicates a system directory]
+        ignore line: [ignoring duplicate directory "/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/sqlite-3.46.0-w5wc5lh/include"]
+        ignore line: [  as it is a non-system directory that duplicates a system directory]
+        ignore line: [ignoring duplicate directory "/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gdbm-1.23-cxbw4jn/include"]
+        ignore line: [  as it is a non-system directory that duplicates a system directory]
+        ignore line: [ignoring duplicate directory "/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/expat-2.6.4-7j6nhb6/include"]
+        ignore line: [  as it is a non-system directory that duplicates a system directory]
+        ignore line: [ignoring duplicate directory "/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/libbsd-0.12.2-wxndujc/include"]
+        ignore line: [  as it is a non-system directory that duplicates a system directory]
+        ignore line: [ignoring duplicate directory "/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/libmd-1.0.4-q6tzwyj/include"]
+        ignore line: [  as it is a non-system directory that duplicates a system directory]
+        ignore line: [ignoring duplicate directory "/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/bzip2-1.0.8-i5o442p/include"]
+        ignore line: [  as it is a non-system directory that duplicates a system directory]
+        ignore line: [ignoring duplicate directory "/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/oneapi-2025.0.5/mpich-develop-git.6037a7a-sxnhr7p/include"]
+        ignore line: [  as it is a non-system directory that duplicates a system directory]
+        ignore line: [ignoring duplicate directory "/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/oneapi-2025.0.5/yaksa-0.3-7ks5f26/include"]
+        ignore line: [  as it is a non-system directory that duplicates a system directory]
+        ignore line: [ignoring duplicate directory "/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/oneapi-2025.0.5/hwloc-2.11.3-mpich-g7c7dzn/include"]
+        ignore line: [  as it is a non-system directory that duplicates a system directory]
+        ignore line: [ignoring duplicate directory "/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/libxml2-2.13.5-jxhkqdj/include"]
+        ignore line: [  as it is a non-system directory that duplicates a system directory]
+        ignore line: [ignoring duplicate directory "/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/libiconv-1.17-jjpb4sl/include"]
+        ignore line: [  as it is a non-system directory that duplicates a system directory]
+        ignore line: [ignoring duplicate directory "/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gcc-13.3.0-4enwbrb/include"]
+        ignore line: [  as it is a non-system directory that duplicates a system directory]
+        ignore line: [ignoring duplicate directory "/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/mpc-1.3.1-rdrlvsl/include"]
+        ignore line: [  as it is a non-system directory that duplicates a system directory]
+        ignore line: [ignoring duplicate directory "/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/mpfr-4.2.1-gkcdl5w/include"]
+        ignore line: [  as it is a non-system directory that duplicates a system directory]
+        ignore line: [ignoring duplicate directory "/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gmp-6.3.0-mtokfaw/include"]
+        ignore line: [  as it is a non-system directory that duplicates a system directory]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /opt/aurora/24.347.0/support/libraries/khronos/default/include]
+        ignore line: [ /opt/aurora/24.347.0/oneapi/pti/latest/include]
+        ignore line: [ /opt/aurora/24.347.0/oneapi/umf/latest/include]
+        ignore line: [ /opt/aurora/24.347.0/oneapi/ipp/latest/include]
+        ignore line: [ /opt/aurora/24.347.0/oneapi/ippcp/latest/include]
+        ignore line: [ /opt/aurora/24.347.0/oneapi/dpcpp-ct/latest/include]
+        ignore line: [ /opt/aurora/24.347.0/oneapi/dpl/latest/include]
+        ignore line: [ /opt/aurora/24.347.0/oneapi/ccl/latest/include]
+        ignore line: [ /opt/aurora/24.347.0/oneapi/dal/latest/include/dal]
+        ignore line: [ /opt/aurora/24.347.0/oneapi/dnnl/latest/include]
+        ignore line: [ /opt/aurora/24.347.0/oneapi/tbb/latest/include]
+        ignore line: [ /opt/aurora/24.347.0/oneapi/mkl/latest/include]
+        ignore line: [ /opt/aurora/24.347.0/oneapi/dev-utilities/latest/include]
+        ignore line: [ /opt/aurora/24.347.0/oneapi/compiler/latest/include]
+        ignore line: [ /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/python-3.10.14-c4ipjly/include]
+        ignore line: [ /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/sqlite-3.46.0-w5wc5lh/include]
+        ignore line: [ /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gdbm-1.23-cxbw4jn/include]
+        ignore line: [ /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/expat-2.6.4-7j6nhb6/include]
+        ignore line: [ /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/libbsd-0.12.2-wxndujc/include]
+        ignore line: [ /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/libmd-1.0.4-q6tzwyj/include]
+        ignore line: [ /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/bzip2-1.0.8-i5o442p/include]
+        ignore line: [ /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/oneapi-2025.0.5/mpich-develop-git.6037a7a-sxnhr7p/include]
+        ignore line: [ /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/oneapi-2025.0.5/yaksa-0.3-7ks5f26/include]
+        ignore line: [ /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/oneapi-2025.0.5/hwloc-2.11.3-mpich-g7c7dzn/include]
+        ignore line: [ /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/libxml2-2.13.5-jxhkqdj/include]
+        ignore line: [ /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/libiconv-1.17-jjpb4sl/include]
+        ignore line: [ /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gcc-13.3.0-4enwbrb/include]
+        ignore line: [ /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/mpc-1.3.1-rdrlvsl/include]
+        ignore line: [ /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/mpfr-4.2.1-gkcdl5w/include]
+        ignore line: [ /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gmp-6.3.0-mtokfaw/include]
+        ignore line: [ /opt/aurora/24.347.0/oneapi/compiler/2025.0/bin/compiler/../../opt/compiler/include]
+        ignore line: [ /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gcc-13.3.0-4enwbrb/lib/gcc/x86_64-pc-linux-gnu/13.3.0/../../../../include/c++/13.3.0]
+        ignore line: [ /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gcc-13.3.0-4enwbrb/lib/gcc/x86_64-pc-linux-gnu/13.3.0/../../../../include/c++/13.3.0/x86_64-pc-linux-gnu]
+        ignore line: [ /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gcc-13.3.0-4enwbrb/lib/gcc/x86_64-pc-linux-gnu/13.3.0/../../../../include/c++/13.3.0/backward]
+        ignore line: [ /opt/aurora/24.347.0/oneapi/compiler/2025.0/lib/clang/19/include]
+        ignore line: [ /usr/local/include]
+        ignore line: [ /usr/include]
+        ignore line: [End of search list.]
+        ignore line: [Linking CXX executable cmTC_d06d7]
+        ignore line: [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/cmake-3.30.5-igar7ts/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d06d7.dir/link.txt --verbose=1]
+        ignore line: [/opt/aurora/24.347.0/oneapi/compiler/latest/bin/icpx  -v CMakeFiles/cmTC_d06d7.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_d06d7]
+        ignore line: [Intel(R) oneAPI DPC++/C++ Compiler 2025.0.4 (2025.0.4.20241205)]
+        ignore line: [Target: x86_64-unknown-linux-gnu]
+        ignore line: [Thread model: posix]
+        ignore line: [InstalledDir: /opt/aurora/24.347.0/oneapi/compiler/2025.0/bin/compiler]
+        ignore line: [Configuration file: /opt/aurora/24.347.0/oneapi/compiler/2025.0/bin/compiler/../icpx.cfg]
+        ignore line: [Found candidate GCC installation: /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gcc-13.3.0-4enwbrb/lib/gcc/x86_64-pc-linux-gnu/13.3.0]
+        ignore line: [Selected GCC installation: /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gcc-13.3.0-4enwbrb/lib/gcc/x86_64-pc-linux-gnu/13.3.0]
+        ignore line: [Candidate multilib: .]
+        ignore line: [@m64]
+        ignore line: [Selected multilib: .]
+        ignore line: [@m64]
+        link line: [ "/usr/bin/ld" -z relro --hash-style=both --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_d06d7 /usr/lib/../lib64/crt1.o /usr/lib/../lib64/crti.o /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gcc-13.3.0-4enwbrb/lib/gcc/x86_64-pc-linux-gnu/13.3.0/crtbegin.o -L/opt/aurora/24.347.0/oneapi/compiler/2025.0/bin/compiler/../../lib -L/opt/aurora/24.347.0/oneapi/compiler/2025.0/bin/compiler/../../lib -L/opt/aurora/24.347.0/oneapi/compiler/2025.0/lib/clang/19/lib/x86_64-unknown-linux-gnu -L/opt/aurora/24.347.0/oneapi/compiler/2025.0/bin/compiler/../../lib -L/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gcc-13.3.0-4enwbrb/lib/gcc/x86_64-pc-linux-gnu/13.3.0 -L/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gcc-13.3.0-4enwbrb/lib/gcc/x86_64-pc-linux-gnu/13.3.0/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gcc-13.3.0-4enwbrb/lib/gcc/x86_64-pc-linux-gnu/13.3.0/../../.. -L/opt/aurora/24.347.0/oneapi/compiler/2025.0/bin/compiler/../../lib -L/opt/aurora/24.347.0/oneapi/compiler/2025.0/bin/compiler/../../opt/compiler/lib -L/lib -L/usr/lib -L/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/python-3.10.14-c4ipjly/lib -L/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/sqlite-3.46.0-w5wc5lh/lib -L/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gdbm-1.23-cxbw4jn/lib -L/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/expat-2.6.4-7j6nhb6/lib -L/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/libbsd-0.12.2-wxndujc/lib -L/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/libmd-1.0.4-q6tzwyj/lib -L/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/bzip2-1.0.8-i5o442p/lib -L/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/oneapi-2025.0.5/mpich-develop-git.6037a7a-sxnhr7p/lib -L/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/oneapi-2025.0.5/yaksa-0.3-7ks5f26/lib -L/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/oneapi-2025.0.5/hwloc-2.11.3-mpich-g7c7dzn/lib -L/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/libxml2-2.13.5-jxhkqdj/lib -L/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/libiconv-1.17-jjpb4sl/lib -L/opt/aurora/24.347.0/support/libraries/khronos/default/lib64 -L/opt/aurora/24.347.0/oneapi/pti/latest/lib -L/opt/aurora/24.347.0/oneapi/tcm/latest/lib -L/opt/aurora/24.347.0/oneapi/umf/latest/lib -L/opt/aurora/24.347.0/oneapi/ipp/latest/lib -L/opt/aurora/24.347.0/oneapi/ippcp/latest/lib -L/opt/aurora/24.347.0/oneapi/ccl/latest/lib -L/opt/aurora/24.347.0/oneapi/dal/latest/lib -L/opt/aurora/24.347.0/oneapi/dnnl/latest/lib -L/opt/aurora/24.347.0/oneapi/tbb/latest/lib/intel64/gcc4.8 -L/opt/aurora/24.347.0/oneapi/mkl/latest/lib -L/opt/aurora/24.347.0/oneapi/compiler/latest/lib -L/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gcc-13.3.0-4enwbrb/lib64 -L/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gcc-13.3.0-4enwbrb/lib -L/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/mpc-1.3.1-rdrlvsl/lib -L/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/mpfr-4.2.1-gkcdl5w/lib -L/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gmp-6.3.0-mtokfaw/lib -L/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gcc-runtime-13.3.0-ghotoln/lib CMakeFiles/cmTC_d06d7.dir/CMakeCXXCompilerABI.cpp.o -Bstatic -lsvml -Bdynamic -Bstatic -lirng -Bdynamic -lstdc++ -Bstatic -limf -Bdynamic -lm -lgcc_s -lgcc -Bstatic -lirc -Bdynamic -ldl -lgcc_s -lgcc -lc -lgcc_s -lgcc -Bstatic -lirc_s -Bdynamic /opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gcc-13.3.0-4enwbrb/lib/gcc/x86_64-pc-linux-gnu/13.3.0/crtend.o /usr/lib/../lib64/crtn.o]
+          arg [/usr/bin/ld] ==> ignore
+          arg [-zrelro] ==> ignore
+          arg [--hash-style=both] ==> ignore
+          arg [--eh-frame-hdr] ==> ignore
+          arg [-m] ==> ignore
+          arg [elf_x86_64] ==> ignore
+          arg [-dynamic-linker] ==> ignore
+          arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_d06d7] ==> ignore
+          arg [/usr/lib/../lib64/crt1.o] ==> obj [/usr/lib/../lib64/crt1.o]
+          arg [/usr/lib/../lib64/crti.o] ==> obj [/usr/lib/../lib64/crti.o]
+          arg [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gcc-13.3.0-4enwbrb/lib/gcc/x86_64-pc-linux-gnu/13.3.0/crtbegin.o] ==> obj [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gcc-13.3.0-4enwbrb/lib/gcc/x86_64-pc-linux-gnu/13.3.0/crtbegin.o]
+          arg [-L/opt/aurora/24.347.0/oneapi/compiler/2025.0/bin/compiler/../../lib] ==> dir [/opt/aurora/24.347.0/oneapi/compiler/2025.0/bin/compiler/../../lib]
+          arg [-L/opt/aurora/24.347.0/oneapi/compiler/2025.0/bin/compiler/../../lib] ==> dir [/opt/aurora/24.347.0/oneapi/compiler/2025.0/bin/compiler/../../lib]
+          arg [-L/opt/aurora/24.347.0/oneapi/compiler/2025.0/lib/clang/19/lib/x86_64-unknown-linux-gnu] ==> dir [/opt/aurora/24.347.0/oneapi/compiler/2025.0/lib/clang/19/lib/x86_64-unknown-linux-gnu]
+          arg [-L/opt/aurora/24.347.0/oneapi/compiler/2025.0/bin/compiler/../../lib] ==> dir [/opt/aurora/24.347.0/oneapi/compiler/2025.0/bin/compiler/../../lib]
+          arg [-L/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gcc-13.3.0-4enwbrb/lib/gcc/x86_64-pc-linux-gnu/13.3.0] ==> dir [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gcc-13.3.0-4enwbrb/lib/gcc/x86_64-pc-linux-gnu/13.3.0]
+          arg [-L/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gcc-13.3.0-4enwbrb/lib/gcc/x86_64-pc-linux-gnu/13.3.0/../../../../lib64] ==> dir [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gcc-13.3.0-4enwbrb/lib/gcc/x86_64-pc-linux-gnu/13.3.0/../../../../lib64]
+          arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
+          arg [-L/usr/lib/../lib64] ==> dir [/usr/lib/../lib64]
+          arg [-L/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gcc-13.3.0-4enwbrb/lib/gcc/x86_64-pc-linux-gnu/13.3.0/../../..] ==> dir [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gcc-13.3.0-4enwbrb/lib/gcc/x86_64-pc-linux-gnu/13.3.0/../../..]
+          arg [-L/opt/aurora/24.347.0/oneapi/compiler/2025.0/bin/compiler/../../lib] ==> dir [/opt/aurora/24.347.0/oneapi/compiler/2025.0/bin/compiler/../../lib]
+          arg [-L/opt/aurora/24.347.0/oneapi/compiler/2025.0/bin/compiler/../../opt/compiler/lib] ==> dir [/opt/aurora/24.347.0/oneapi/compiler/2025.0/bin/compiler/../../opt/compiler/lib]
+          arg [-L/lib] ==> dir [/lib]
+          arg [-L/usr/lib] ==> dir [/usr/lib]
+          arg [-L/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/python-3.10.14-c4ipjly/lib] ==> dir [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/python-3.10.14-c4ipjly/lib]
+          arg [-L/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/sqlite-3.46.0-w5wc5lh/lib] ==> dir [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/sqlite-3.46.0-w5wc5lh/lib]
+          arg [-L/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gdbm-1.23-cxbw4jn/lib] ==> dir [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gdbm-1.23-cxbw4jn/lib]
+          arg [-L/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/expat-2.6.4-7j6nhb6/lib] ==> dir [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/expat-2.6.4-7j6nhb6/lib]
+          arg [-L/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/libbsd-0.12.2-wxndujc/lib] ==> dir [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/libbsd-0.12.2-wxndujc/lib]
+          arg [-L/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/libmd-1.0.4-q6tzwyj/lib] ==> dir [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/libmd-1.0.4-q6tzwyj/lib]
+          arg [-L/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/bzip2-1.0.8-i5o442p/lib] ==> dir [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/bzip2-1.0.8-i5o442p/lib]
+          arg [-L/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/oneapi-2025.0.5/mpich-develop-git.6037a7a-sxnhr7p/lib] ==> dir [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/oneapi-2025.0.5/mpich-develop-git.6037a7a-sxnhr7p/lib]
+          arg [-L/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/oneapi-2025.0.5/yaksa-0.3-7ks5f26/lib] ==> dir [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/oneapi-2025.0.5/yaksa-0.3-7ks5f26/lib]
+          arg [-L/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/oneapi-2025.0.5/hwloc-2.11.3-mpich-g7c7dzn/lib] ==> dir [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/oneapi-2025.0.5/hwloc-2.11.3-mpich-g7c7dzn/lib]
+          arg [-L/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/libxml2-2.13.5-jxhkqdj/lib] ==> dir [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/libxml2-2.13.5-jxhkqdj/lib]
+          arg [-L/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/libiconv-1.17-jjpb4sl/lib] ==> dir [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/libiconv-1.17-jjpb4sl/lib]
+          arg [-L/opt/aurora/24.347.0/support/libraries/khronos/default/lib64] ==> dir [/opt/aurora/24.347.0/support/libraries/khronos/default/lib64]
+          arg [-L/opt/aurora/24.347.0/oneapi/pti/latest/lib] ==> dir [/opt/aurora/24.347.0/oneapi/pti/latest/lib]
+          arg [-L/opt/aurora/24.347.0/oneapi/tcm/latest/lib] ==> dir [/opt/aurora/24.347.0/oneapi/tcm/latest/lib]
+          arg [-L/opt/aurora/24.347.0/oneapi/umf/latest/lib] ==> dir [/opt/aurora/24.347.0/oneapi/umf/latest/lib]
+          arg [-L/opt/aurora/24.347.0/oneapi/ipp/latest/lib] ==> dir [/opt/aurora/24.347.0/oneapi/ipp/latest/lib]
+          arg [-L/opt/aurora/24.347.0/oneapi/ippcp/latest/lib] ==> dir [/opt/aurora/24.347.0/oneapi/ippcp/latest/lib]
+          arg [-L/opt/aurora/24.347.0/oneapi/ccl/latest/lib] ==> dir [/opt/aurora/24.347.0/oneapi/ccl/latest/lib]
+          arg [-L/opt/aurora/24.347.0/oneapi/dal/latest/lib] ==> dir [/opt/aurora/24.347.0/oneapi/dal/latest/lib]
+          arg [-L/opt/aurora/24.347.0/oneapi/dnnl/latest/lib] ==> dir [/opt/aurora/24.347.0/oneapi/dnnl/latest/lib]
+          arg [-L/opt/aurora/24.347.0/oneapi/tbb/latest/lib/intel64/gcc4.8] ==> dir [/opt/aurora/24.347.0/oneapi/tbb/latest/lib/intel64/gcc4.8]
+          arg [-L/opt/aurora/24.347.0/oneapi/mkl/latest/lib] ==> dir [/opt/aurora/24.347.0/oneapi/mkl/latest/lib]
+          arg [-L/opt/aurora/24.347.0/oneapi/compiler/latest/lib] ==> dir [/opt/aurora/24.347.0/oneapi/compiler/latest/lib]
+          arg [-L/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gcc-13.3.0-4enwbrb/lib64] ==> dir [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gcc-13.3.0-4enwbrb/lib64]
+          arg [-L/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gcc-13.3.0-4enwbrb/lib] ==> dir [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gcc-13.3.0-4enwbrb/lib]
+          arg [-L/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/mpc-1.3.1-rdrlvsl/lib] ==> dir [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/mpc-1.3.1-rdrlvsl/lib]
+          arg [-L/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/mpfr-4.2.1-gkcdl5w/lib] ==> dir [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/mpfr-4.2.1-gkcdl5w/lib]
+          arg [-L/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gmp-6.3.0-mtokfaw/lib] ==> dir [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gmp-6.3.0-mtokfaw/lib]
+          arg [-L/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gcc-runtime-13.3.0-ghotoln/lib] ==> dir [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gcc-runtime-13.3.0-ghotoln/lib]
+          arg [CMakeFiles/cmTC_d06d7.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+          arg [-Bstatic] ==> search static
+          arg [-lsvml] ==> lib [svml]
+          arg [-Bdynamic] ==> search dynamic
+          arg [-Bstatic] ==> search static
+          arg [-lirng] ==> lib [irng]
+          arg [-Bdynamic] ==> search dynamic
+          arg [-lstdc++] ==> lib [stdc++]
+          arg [-Bstatic] ==> search static
+          arg [-limf] ==> lib [imf]
+          arg [-Bdynamic] ==> search dynamic
+          arg [-lm] ==> lib [m]
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [-lgcc] ==> lib [gcc]
+          arg [-Bstatic] ==> search static
+          arg [-lirc] ==> lib [irc]
+          arg [-Bdynamic] ==> search dynamic
+          arg [-ldl] ==> lib [dl]
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [-lgcc] ==> lib [gcc]
+          arg [-lc] ==> lib [c]
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [-lgcc] ==> lib [gcc]
+          arg [-Bstatic] ==> search static
+          arg [-lirc_s] ==> lib [irc_s]
+          arg [-Bdynamic] ==> search dynamic
+          arg [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gcc-13.3.0-4enwbrb/lib/gcc/x86_64-pc-linux-gnu/13.3.0/crtend.o] ==> obj [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gcc-13.3.0-4enwbrb/lib/gcc/x86_64-pc-linux-gnu/13.3.0/crtend.o]
+          arg [/usr/lib/../lib64/crtn.o] ==> obj [/usr/lib/../lib64/crtn.o]
+        linker tool for 'CXX': /usr/bin/ld
+        collapse obj [/usr/lib/../lib64/crt1.o] ==> [/usr/lib64/crt1.o]
+        collapse obj [/usr/lib/../lib64/crti.o] ==> [/usr/lib64/crti.o]
+        collapse obj [/usr/lib/../lib64/crtn.o] ==> [/usr/lib64/crtn.o]
+        collapse library dir [/opt/aurora/24.347.0/oneapi/compiler/2025.0/bin/compiler/../../lib] ==> [/opt/aurora/24.347.0/oneapi/compiler/2025.0/lib]
+        collapse library dir [/opt/aurora/24.347.0/oneapi/compiler/2025.0/bin/compiler/../../lib] ==> [/opt/aurora/24.347.0/oneapi/compiler/2025.0/lib]
+        collapse library dir [/opt/aurora/24.347.0/oneapi/compiler/2025.0/lib/clang/19/lib/x86_64-unknown-linux-gnu] ==> [/opt/aurora/24.347.0/oneapi/compiler/2025.0/lib/clang/19/lib/x86_64-unknown-linux-gnu]
+        collapse library dir [/opt/aurora/24.347.0/oneapi/compiler/2025.0/bin/compiler/../../lib] ==> [/opt/aurora/24.347.0/oneapi/compiler/2025.0/lib]
+        collapse library dir [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gcc-13.3.0-4enwbrb/lib/gcc/x86_64-pc-linux-gnu/13.3.0] ==> [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gcc-13.3.0-4enwbrb/lib/gcc/x86_64-pc-linux-gnu/13.3.0]
+        collapse library dir [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gcc-13.3.0-4enwbrb/lib/gcc/x86_64-pc-linux-gnu/13.3.0/../../../../lib64] ==> [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gcc-13.3.0-4enwbrb/lib64]
+        collapse library dir [/lib/../lib64] ==> [/lib64]
+        collapse library dir [/usr/lib/../lib64] ==> [/usr/lib64]
+        collapse library dir [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gcc-13.3.0-4enwbrb/lib/gcc/x86_64-pc-linux-gnu/13.3.0/../../..] ==> [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gcc-13.3.0-4enwbrb/lib]
+        collapse library dir [/opt/aurora/24.347.0/oneapi/compiler/2025.0/bin/compiler/../../lib] ==> [/opt/aurora/24.347.0/oneapi/compiler/2025.0/lib]
+        collapse library dir [/opt/aurora/24.347.0/oneapi/compiler/2025.0/bin/compiler/../../opt/compiler/lib] ==> [/opt/aurora/24.347.0/oneapi/compiler/2025.0/opt/compiler/lib]
+        collapse library dir [/lib] ==> [/lib]
+        collapse library dir [/usr/lib] ==> [/usr/lib]
+        collapse library dir [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/python-3.10.14-c4ipjly/lib] ==> [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/python-3.10.14-c4ipjly/lib]
+        collapse library dir [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/sqlite-3.46.0-w5wc5lh/lib] ==> [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/sqlite-3.46.0-w5wc5lh/lib]
+        collapse library dir [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gdbm-1.23-cxbw4jn/lib] ==> [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gdbm-1.23-cxbw4jn/lib]
+        collapse library dir [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/expat-2.6.4-7j6nhb6/lib] ==> [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/expat-2.6.4-7j6nhb6/lib]
+        collapse library dir [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/libbsd-0.12.2-wxndujc/lib] ==> [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/libbsd-0.12.2-wxndujc/lib]
+        collapse library dir [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/libmd-1.0.4-q6tzwyj/lib] ==> [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/libmd-1.0.4-q6tzwyj/lib]
+        collapse library dir [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/bzip2-1.0.8-i5o442p/lib] ==> [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/bzip2-1.0.8-i5o442p/lib]
+        collapse library dir [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/oneapi-2025.0.5/mpich-develop-git.6037a7a-sxnhr7p/lib] ==> [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/oneapi-2025.0.5/mpich-develop-git.6037a7a-sxnhr7p/lib]
+        collapse library dir [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/oneapi-2025.0.5/yaksa-0.3-7ks5f26/lib] ==> [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/oneapi-2025.0.5/yaksa-0.3-7ks5f26/lib]
+        collapse library dir [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/oneapi-2025.0.5/hwloc-2.11.3-mpich-g7c7dzn/lib] ==> [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/oneapi-2025.0.5/hwloc-2.11.3-mpich-g7c7dzn/lib]
+        collapse library dir [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/libxml2-2.13.5-jxhkqdj/lib] ==> [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/libxml2-2.13.5-jxhkqdj/lib]
+        collapse library dir [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/libiconv-1.17-jjpb4sl/lib] ==> [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/libiconv-1.17-jjpb4sl/lib]
+        collapse library dir [/opt/aurora/24.347.0/support/libraries/khronos/default/lib64] ==> [/opt/aurora/24.347.0/support/libraries/khronos/default/lib64]
+        collapse library dir [/opt/aurora/24.347.0/oneapi/pti/latest/lib] ==> [/opt/aurora/24.347.0/oneapi/pti/latest/lib]
+        collapse library dir [/opt/aurora/24.347.0/oneapi/tcm/latest/lib] ==> [/opt/aurora/24.347.0/oneapi/tcm/latest/lib]
+        collapse library dir [/opt/aurora/24.347.0/oneapi/umf/latest/lib] ==> [/opt/aurora/24.347.0/oneapi/umf/latest/lib]
+        collapse library dir [/opt/aurora/24.347.0/oneapi/ipp/latest/lib] ==> [/opt/aurora/24.347.0/oneapi/ipp/latest/lib]
+        collapse library dir [/opt/aurora/24.347.0/oneapi/ippcp/latest/lib] ==> [/opt/aurora/24.347.0/oneapi/ippcp/latest/lib]
+        collapse library dir [/opt/aurora/24.347.0/oneapi/ccl/latest/lib] ==> [/opt/aurora/24.347.0/oneapi/ccl/latest/lib]
+        collapse library dir [/opt/aurora/24.347.0/oneapi/dal/latest/lib] ==> [/opt/aurora/24.347.0/oneapi/dal/latest/lib]
+        collapse library dir [/opt/aurora/24.347.0/oneapi/dnnl/latest/lib] ==> [/opt/aurora/24.347.0/oneapi/dnnl/latest/lib]
+        collapse library dir [/opt/aurora/24.347.0/oneapi/tbb/latest/lib/intel64/gcc4.8] ==> [/opt/aurora/24.347.0/oneapi/tbb/latest/lib/intel64/gcc4.8]
+        collapse library dir [/opt/aurora/24.347.0/oneapi/mkl/latest/lib] ==> [/opt/aurora/24.347.0/oneapi/mkl/latest/lib]
+        collapse library dir [/opt/aurora/24.347.0/oneapi/compiler/latest/lib] ==> [/opt/aurora/24.347.0/oneapi/compiler/latest/lib]
+        collapse library dir [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gcc-13.3.0-4enwbrb/lib64] ==> [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gcc-13.3.0-4enwbrb/lib64]
+        collapse library dir [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gcc-13.3.0-4enwbrb/lib] ==> [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gcc-13.3.0-4enwbrb/lib]
+        collapse library dir [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/mpc-1.3.1-rdrlvsl/lib] ==> [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/mpc-1.3.1-rdrlvsl/lib]
+        collapse library dir [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/mpfr-4.2.1-gkcdl5w/lib] ==> [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/mpfr-4.2.1-gkcdl5w/lib]
+        collapse library dir [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gmp-6.3.0-mtokfaw/lib] ==> [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gmp-6.3.0-mtokfaw/lib]
+        collapse library dir [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gcc-runtime-13.3.0-ghotoln/lib] ==> [/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gcc-runtime-13.3.0-ghotoln/lib]
+        implicit libs: [svml;irng;stdc++;imf;m;gcc_s;gcc;irc;dl;gcc_s;gcc;c;gcc_s;gcc;irc_s]
+        implicit objs: [/usr/lib64/crt1.o;/usr/lib64/crti.o;/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gcc-13.3.0-4enwbrb/lib/gcc/x86_64-pc-linux-gnu/13.3.0/crtbegin.o;/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gcc-13.3.0-4enwbrb/lib/gcc/x86_64-pc-linux-gnu/13.3.0/crtend.o;/usr/lib64/crtn.o]
+        implicit dirs: [/opt/aurora/24.347.0/oneapi/compiler/2025.0/lib;/opt/aurora/24.347.0/oneapi/compiler/2025.0/lib/clang/19/lib/x86_64-unknown-linux-gnu;/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gcc-13.3.0-4enwbrb/lib/gcc/x86_64-pc-linux-gnu/13.3.0;/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gcc-13.3.0-4enwbrb/lib64;/lib64;/usr/lib64;/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gcc-13.3.0-4enwbrb/lib;/opt/aurora/24.347.0/oneapi/compiler/2025.0/opt/compiler/lib;/lib;/usr/lib;/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/python-3.10.14-c4ipjly/lib;/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/sqlite-3.46.0-w5wc5lh/lib;/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gdbm-1.23-cxbw4jn/lib;/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/expat-2.6.4-7j6nhb6/lib;/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/libbsd-0.12.2-wxndujc/lib;/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/libmd-1.0.4-q6tzwyj/lib;/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/bzip2-1.0.8-i5o442p/lib;/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/oneapi-2025.0.5/mpich-develop-git.6037a7a-sxnhr7p/lib;/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/oneapi-2025.0.5/yaksa-0.3-7ks5f26/lib;/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/oneapi-2025.0.5/hwloc-2.11.3-mpich-g7c7dzn/lib;/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/libxml2-2.13.5-jxhkqdj/lib;/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/libiconv-1.17-jjpb4sl/lib;/opt/aurora/24.347.0/support/libraries/khronos/default/lib64;/opt/aurora/24.347.0/oneapi/pti/latest/lib;/opt/aurora/24.347.0/oneapi/tcm/latest/lib;/opt/aurora/24.347.0/oneapi/umf/latest/lib;/opt/aurora/24.347.0/oneapi/ipp/latest/lib;/opt/aurora/24.347.0/oneapi/ippcp/latest/lib;/opt/aurora/24.347.0/oneapi/ccl/latest/lib;/opt/aurora/24.347.0/oneapi/dal/latest/lib;/opt/aurora/24.347.0/oneapi/dnnl/latest/lib;/opt/aurora/24.347.0/oneapi/tbb/latest/lib/intel64/gcc4.8;/opt/aurora/24.347.0/oneapi/mkl/latest/lib;/opt/aurora/24.347.0/oneapi/compiler/latest/lib;/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/mpc-1.3.1-rdrlvsl/lib;/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/mpfr-4.2.1-gkcdl5w/lib;/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gmp-6.3.0-mtokfaw/lib;/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/gcc-runtime-13.3.0-ghotoln/lib]
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/cmake-3.30.5-igar7ts/share/cmake-3.30/Modules/Internal/CMakeDetermineLinkerId.cmake:40 (message)"
+      - "/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/cmake-3.30.5-igar7ts/share/cmake-3.30/Modules/CMakeDetermineCompilerABI.cmake:255 (cmake_determine_linker_id)"
+      - "/opt/aurora/24.347.0/spack/unified/0.9.2/install/linux-sles15-x86_64/gcc-13.3.0/cmake-3.30.5-igar7ts/share/cmake-3.30/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Running the CXX compiler's linker: "/usr/bin/ld" "-v"
+      GNU ld (GNU Binutils; SUSE Linux Enterprise 15) 2.41.0.20230908-150100.7.46
+...
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/Users/cluangrath/anaconda3/lib/python3.11/site-packages/cmake/data/share/cmake-4.0/Modules/CMakeDetermineSystem.cmake:205 (message)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      The system is: Darwin - 22.3.0 - arm64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/Users/cluangrath/anaconda3/lib/python3.11/site-packages/cmake/data/share/cmake-4.0/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/Users/cluangrath/anaconda3/lib/python3.11/site-packages/cmake/data/share/cmake-4.0/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/Users/cluangrath/anaconda3/lib/python3.11/site-packages/cmake/data/share/cmake-4.0/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: /usr/bin/clang++ 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+      
+      The CXX compiler identification is AppleClang, found in:
+        /Users/cluangrath/Desktop/colin_itt/build/CMakeFiles/4.0.2/CompilerIdCXX/a.out
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/Users/cluangrath/anaconda3/lib/python3.11/site-packages/cmake/data/share/cmake-4.0/Modules/CMakeDetermineCompilerId.cmake:290 (message)"
+      - "/Users/cluangrath/anaconda3/lib/python3.11/site-packages/cmake/data/share/cmake-4.0/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Detecting CXX compiler apple sysroot: "/usr/bin/clang++" "-E" "apple-sdk.cpp"
+        # 1 "apple-sdk.cpp"
+        # 1 "<built-in>" 1
+        # 1 "<built-in>" 3
+        # 428 "<built-in>" 3
+        # 1 "<command line>" 1
+        # 1 "<built-in>" 2
+        # 1 "apple-sdk.cpp" 2
+        # 1 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityMacros.h" 1 3 4
+        # 243 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityMacros.h" 3 4
+        # 1 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/Availability.h" 1 3 4
+        # 165 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/Availability.h" 3 4
+        # 1 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityVersions.h" 1 3 4
+        # 166 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/Availability.h" 2 3 4
+        # 1 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityInternal.h" 1 3 4
+        # 167 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/Availability.h" 2 3 4
+        # 244 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityMacros.h" 2 3 4
+        # 2 "apple-sdk.cpp" 2
+        
+        
+      Found apple sysroot: /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/Users/cluangrath/anaconda3/lib/python3.11/site-packages/cmake/data/share/cmake-4.0/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
+      - "/Users/cluangrath/anaconda3/lib/python3.11/site-packages/cmake/data/share/cmake-4.0/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "/Users/cluangrath/Desktop/colin_itt/build/CMakeFiles/CMakeScratch/TryCompile-d464s5"
+      binary: "/Users/cluangrath/Desktop/colin_itt/build/CMakeFiles/CMakeScratch/TryCompile-d464s5"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_CXX_SCAN_FOR_MODULES: "OFF"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/cluangrath/Desktop/colin_itt/build/CMakeFiles/CMakeScratch/TryCompile-d464s5'
+        
+        Run Build Command(s): /Users/cluangrath/anaconda3/bin/ninja -v cmTC_f86b6
+        [1/2] /usr/bin/clang++   -arch arm64   -v -Wl,-v -MD -MT CMakeFiles/cmTC_f86b6.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_f86b6.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_f86b6.dir/CMakeCXXCompilerABI.cpp.o -c /Users/cluangrath/anaconda3/lib/python3.11/site-packages/cmake/data/share/cmake-4.0/Modules/CMakeCXXCompilerABI.cpp
+        Apple clang version 14.0.3 (clang-1403.0.22.14.1)
+        Target: arm64-apple-darwin22.3.0
+        Thread model: posix
+        InstalledDir: /Library/Developer/CommandLineTools/usr/bin
+        clang: warning: -Wl,-v: 'linker' input unused [-Wunused-command-line-argument]
+         "/Library/Developer/CommandLineTools/usr/bin/clang" -cc1 -triple arm64-apple-macosx13.0.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -mrelax-all --mrelax-relocations -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -target-sdk-version=13.3 -fvisibility-inlines-hidden-static-local-var -target-cpu apple-m1 -target-feature +v8.5a -target-feature +crc -target-feature +lse -target-feature +rdm -target-feature +crypto -target-feature +dotprod -target-feature +fp-armv8 -target-feature +neon -target-feature +fp16fml -target-feature +ras -target-feature +rcpc -target-feature +zcm -target-feature +zcz -target-feature +fullfp16 -target-feature +sm4 -target-feature +sha3 -target-feature +sha2 -target-feature +aes -target-abi darwinpcs -fallow-half-arguments-and-returns -mllvm -treat-scalable-fixed-error-as-warning -debugger-tuning=lldb -target-linker-version 857.1 -v -fcoverage-compilation-dir=/Users/cluangrath/Desktop/colin_itt/build/CMakeFiles/CMakeScratch/TryCompile-d464s5 -resource-dir /Library/Developer/CommandLineTools/usr/lib/clang/14.0.3 -dependency-file CMakeFiles/cmTC_f86b6.dir/CMakeCXXCompilerABI.cpp.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_f86b6.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -I/usr/local/include -stdlib=libc++ -internal-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1 -internal-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /Library/Developer/CommandLineTools/usr/lib/clang/14.0.3/include -internal-externc-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include -internal-externc-isystem /Library/Developer/CommandLineTools/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant -fdeprecated-macro -fdebug-compilation-dir=/Users/cluangrath/Desktop/colin_itt/build/CMakeFiles/CMakeScratch/TryCompile-d464s5 -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fno-cxx-modules -no-opaque-pointers -fcxx-exceptions -fexceptions -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -mllvm -disable-aligned-alloc-awareness=1 -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_f86b6.dir/CMakeCXXCompilerABI.cpp.o -x c++ /Users/cluangrath/anaconda3/lib/python3.11/site-packages/cmake/data/share/cmake-4.0/Modules/CMakeCXXCompilerABI.cpp
+        clang -cc1 version 14.0.3 (clang-1403.0.22.14.1) default target arm64-apple-darwin22.3.0
+        ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/local/include"
+        ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/Library/Frameworks"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /usr/local/include
+         /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1
+         /Library/Developer/CommandLineTools/usr/lib/clang/14.0.3/include
+         /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include
+         /Library/Developer/CommandLineTools/usr/include
+         /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks (framework directory)
+        End of search list.
+        [2/2] : && /usr/bin/clang++ -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names -v -Wl,-v CMakeFiles/cmTC_f86b6.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_f86b6   && :
+        Apple clang version 14.0.3 (clang-1403.0.22.14.1)
+        Target: arm64-apple-darwin22.3.0
+        Thread model: posix
+        InstalledDir: /Library/Developer/CommandLineTools/usr/bin
+         "/Library/Developer/CommandLineTools/usr/bin/ld" -demangle -lto_library /Library/Developer/CommandLineTools/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 13.0.0 13.3 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -o cmTC_f86b6 -L/usr/local/lib -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_f86b6.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Library/Developer/CommandLineTools/usr/lib/clang/14.0.3/lib/darwin/libclang_rt.osx.a
+        @(#)PROGRAM:ld  PROJECT:ld64-857.1
+        BUILD 23:13:29 May  7 2023
+        configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em
+        Library search paths:
+        	/usr/local/lib
+        	/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib
+        Framework search paths:
+        	/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/Users/cluangrath/anaconda3/lib/python3.11/site-packages/cmake/data/share/cmake-4.0/Modules/CMakeDetermineCompilerABI.cmake:122 (message)"
+      - "/Users/cluangrath/anaconda3/lib/python3.11/site-packages/cmake/data/share/cmake-4.0/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Effective list of requested architectures (possibly empty)  : ""
+      Effective list of architectures found in the ABI info binary: "arm64"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/Users/cluangrath/anaconda3/lib/python3.11/site-packages/cmake/data/share/cmake-4.0/Modules/CMakeDetermineCompilerABI.cmake:191 (message)"
+      - "/Users/cluangrath/anaconda3/lib/python3.11/site-packages/cmake/data/share/cmake-4.0/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed CXX implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/usr/local/include]
+          add: [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1]
+          add: [/Library/Developer/CommandLineTools/usr/lib/clang/14.0.3/include]
+          add: [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include]
+          add: [/Library/Developer/CommandLineTools/usr/include]
+        end of search list found
+        collapse include dir [/usr/local/include] ==> [/usr/local/include]
+        collapse include dir [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1] ==> [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1]
+        collapse include dir [/Library/Developer/CommandLineTools/usr/lib/clang/14.0.3/include] ==> [/Library/Developer/CommandLineTools/usr/lib/clang/14.0.3/include]
+        collapse include dir [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include] ==> [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include]
+        collapse include dir [/Library/Developer/CommandLineTools/usr/include] ==> [/Library/Developer/CommandLineTools/usr/include]
+        implicit include dirs: [/usr/local/include;/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1;/Library/Developer/CommandLineTools/usr/lib/clang/14.0.3/include;/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include;/Library/Developer/CommandLineTools/usr/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/Users/cluangrath/anaconda3/lib/python3.11/site-packages/cmake/data/share/cmake-4.0/Modules/CMakeDetermineCompilerABI.cmake:227 (message)"
+      - "/Users/cluangrath/anaconda3/lib/python3.11/site-packages/cmake/data/share/cmake-4.0/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
+        ignore line: [Change Dir: '/Users/cluangrath/Desktop/colin_itt/build/CMakeFiles/CMakeScratch/TryCompile-d464s5']
+        ignore line: []
+        ignore line: [Run Build Command(s): /Users/cluangrath/anaconda3/bin/ninja -v cmTC_f86b6]
+        ignore line: [[1/2] /usr/bin/clang++   -arch arm64   -v -Wl -v -MD -MT CMakeFiles/cmTC_f86b6.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_f86b6.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_f86b6.dir/CMakeCXXCompilerABI.cpp.o -c /Users/cluangrath/anaconda3/lib/python3.11/site-packages/cmake/data/share/cmake-4.0/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Apple clang version 14.0.3 (clang-1403.0.22.14.1)]
+        ignore line: [Target: arm64-apple-darwin22.3.0]
+        ignore line: [Thread model: posix]
+        ignore line: [InstalledDir: /Library/Developer/CommandLineTools/usr/bin]
+        ignore line: [clang: warning: -Wl -v: 'linker' input unused [-Wunused-command-line-argument]]
+        ignore line: [ "/Library/Developer/CommandLineTools/usr/bin/clang" -cc1 -triple arm64-apple-macosx13.0.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -mrelax-all --mrelax-relocations -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -target-sdk-version=13.3 -fvisibility-inlines-hidden-static-local-var -target-cpu apple-m1 -target-feature +v8.5a -target-feature +crc -target-feature +lse -target-feature +rdm -target-feature +crypto -target-feature +dotprod -target-feature +fp-armv8 -target-feature +neon -target-feature +fp16fml -target-feature +ras -target-feature +rcpc -target-feature +zcm -target-feature +zcz -target-feature +fullfp16 -target-feature +sm4 -target-feature +sha3 -target-feature +sha2 -target-feature +aes -target-abi darwinpcs -fallow-half-arguments-and-returns -mllvm -treat-scalable-fixed-error-as-warning -debugger-tuning=lldb -target-linker-version 857.1 -v -fcoverage-compilation-dir=/Users/cluangrath/Desktop/colin_itt/build/CMakeFiles/CMakeScratch/TryCompile-d464s5 -resource-dir /Library/Developer/CommandLineTools/usr/lib/clang/14.0.3 -dependency-file CMakeFiles/cmTC_f86b6.dir/CMakeCXXCompilerABI.cpp.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_f86b6.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -I/usr/local/include -stdlib=libc++ -internal-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1 -internal-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /Library/Developer/CommandLineTools/usr/lib/clang/14.0.3/include -internal-externc-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include -internal-externc-isystem /Library/Developer/CommandLineTools/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant -fdeprecated-macro -fdebug-compilation-dir=/Users/cluangrath/Desktop/colin_itt/build/CMakeFiles/CMakeScratch/TryCompile-d464s5 -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fno-cxx-modules -no-opaque-pointers -fcxx-exceptions -fexceptions -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -mllvm -disable-aligned-alloc-awareness=1 -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_f86b6.dir/CMakeCXXCompilerABI.cpp.o -x c++ /Users/cluangrath/anaconda3/lib/python3.11/site-packages/cmake/data/share/cmake-4.0/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [clang -cc1 version 14.0.3 (clang-1403.0.22.14.1) default target arm64-apple-darwin22.3.0]
+        ignore line: [ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/local/include"]
+        ignore line: [ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/Library/Frameworks"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /usr/local/include]
+        ignore line: [ /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1]
+        ignore line: [ /Library/Developer/CommandLineTools/usr/lib/clang/14.0.3/include]
+        ignore line: [ /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include]
+        ignore line: [ /Library/Developer/CommandLineTools/usr/include]
+        ignore line: [ /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks (framework directory)]
+        ignore line: [End of search list.]
+        ignore line: [[2/2] : && /usr/bin/clang++ -arch arm64 -Wl -search_paths_first -Wl -headerpad_max_install_names -v -Wl -v CMakeFiles/cmTC_f86b6.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_f86b6   && :]
+        ignore line: [Apple clang version 14.0.3 (clang-1403.0.22.14.1)]
+        ignore line: [Target: arm64-apple-darwin22.3.0]
+        ignore line: [Thread model: posix]
+        ignore line: [InstalledDir: /Library/Developer/CommandLineTools/usr/bin]
+        link line: [ "/Library/Developer/CommandLineTools/usr/bin/ld" -demangle -lto_library /Library/Developer/CommandLineTools/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 13.0.0 13.3 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -o cmTC_f86b6 -L/usr/local/lib -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_f86b6.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Library/Developer/CommandLineTools/usr/lib/clang/14.0.3/lib/darwin/libclang_rt.osx.a]
+          arg [/Library/Developer/CommandLineTools/usr/bin/ld] ==> ignore
+          arg [-demangle] ==> ignore
+          arg [-lto_library] ==> ignore, skip following value
+          arg [/Library/Developer/CommandLineTools/usr/lib/libLTO.dylib] ==> skip value of -lto_library
+          arg [-dynamic] ==> ignore
+          arg [-arch] ==> ignore
+          arg [arm64] ==> ignore
+          arg [-platform_version] ==> ignore
+          arg [macos] ==> ignore
+          arg [13.0.0] ==> ignore
+          arg [13.3] ==> ignore
+          arg [-syslibroot] ==> ignore
+          arg [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_f86b6] ==> ignore
+          arg [-L/usr/local/lib] ==> dir [/usr/local/lib]
+          arg [-search_paths_first] ==> ignore
+          arg [-headerpad_max_install_names] ==> ignore
+          arg [-v] ==> ignore
+          arg [CMakeFiles/cmTC_f86b6.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+          arg [-lc++] ==> lib [c++]
+          arg [-lSystem] ==> lib [System]
+          arg [/Library/Developer/CommandLineTools/usr/lib/clang/14.0.3/lib/darwin/libclang_rt.osx.a] ==> lib [/Library/Developer/CommandLineTools/usr/lib/clang/14.0.3/lib/darwin/libclang_rt.osx.a]
+        linker tool for 'CXX': /Library/Developer/CommandLineTools/usr/bin/ld
+        Library search paths: [;/usr/local/lib;/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib]
+        Framework search paths: [;/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/]
+        remove lib [System]
+        remove lib [/Library/Developer/CommandLineTools/usr/lib/clang/14.0.3/lib/darwin/libclang_rt.osx.a]
+        collapse library dir [/usr/local/lib] ==> [/usr/local/lib]
+        collapse library dir [/usr/local/lib] ==> [/usr/local/lib]
+        collapse library dir [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib] ==> [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib]
+        collapse framework dir [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/] ==> [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks]
+        implicit libs: [c++]
+        implicit objs: []
+        implicit dirs: [/usr/local/lib;/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib]
+        implicit fwks: [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/Users/cluangrath/anaconda3/lib/python3.11/site-packages/cmake/data/share/cmake-4.0/Modules/Internal/CMakeDetermineLinkerId.cmake:36 (message)"
+      - "/Users/cluangrath/anaconda3/lib/python3.11/site-packages/cmake/data/share/cmake-4.0/Modules/CMakeDetermineCompilerABI.cmake:270 (cmake_determine_linker_id)"
+      - "/Users/cluangrath/anaconda3/lib/python3.11/site-packages/cmake/data/share/cmake-4.0/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Running the CXX compiler's linker: "/Library/Developer/CommandLineTools/usr/bin/ld" "-v"
+      @(#)PROGRAM:ld  PROJECT:ld64-857.1
+      BUILD 23:13:29 May  7 2023
+      configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em
+      LTO support using: LLVM version 14.0.3, (clang-1403.0.22.14.1) (static support for 29, runtime is 29)
+      TAPI support using: Apple TAPI version 14.0.3 (tapi-1403.0.5.1)
+...

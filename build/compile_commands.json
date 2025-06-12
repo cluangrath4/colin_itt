@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/Users/cluangrath/Desktop/colin_itt/build",
+  "command": "/usr/bin/clang++ -DBUILD_WITH_ITT=1 -Dcolintrace_EXPORTS -I/home/cluangrath/pti-gpu/tools/unitrace/build/ittheaders -g -std=gnu++17 -arch arm64 -fPIC -o CMakeFiles/colintrace.dir/colintrace.cpp.o -c /Users/cluangrath/Desktop/colin_itt/colintrace.cpp",
+  "file": "/Users/cluangrath/Desktop/colin_itt/colintrace.cpp",
+  "output": "CMakeFiles/colintrace.dir/colintrace.cpp.o"
+}
+]
