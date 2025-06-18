@@ -1,28 +1,25 @@
-ITT_INCLUDE = /home/cluangrath/pti-gpu/tools/unitrace/build/ittheaders
+# Malefile for itt_mini_collector.cpp
 
-# Compiler (same as Unitrace used)
 CXX = icpx
-
-# Output shared object
-TARGET = libcolintrace.so
-
-# Source file
+TARGET = libitt_tracer.so
 SRC = colintrace.cpp
 
-# C++ flags
-CXXFLAGS = -std=c++17 -O2 -fPIC -fvisibility=default -DPTI_VERSION=0.49.28
+# Add the path to your ittnotify.h
+ITT_INCLUDE = /home/cluangrath/colin_itt/
 
-# Include paths
-INCLUDES = -I$(ITT_INCLUDE)
+# C++ flags
+CXXFLAGS = -std=c++17 -g -O2 -fPIC
 
 # Linker flags
-LDFLAGS = -shared -lpthread -ldl
+LDFLAGS = -shared -lpthread
 
 # === BUILD RULES ===
 all: $(TARGET)
 
 $(TARGET): $(SRC)
-	$(CXX) $(CXXFLAGS) $(INCLUDES) -o $@ $< $(LDFLAGS)
+	$(CXX) $(CXXFLAGS) -I$(ITT_INCLUDE) -o $@ $< $(LDFLAGS)
+
+.PHONY: all clean
 
 clean:
 	rm -f $(TARGET)
