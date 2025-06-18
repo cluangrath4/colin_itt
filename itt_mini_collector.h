@@ -23,11 +23,16 @@
 #include <cerrno>
 #include <atomic>
 
+/*
+ * Next goals should be removal of unicontrol.h and unievent.h
+ * and use of the ITT API directly.
+ * This will allow us to remove the dependency on the Intel pti-gpu library.
+ */
 #include "unicontrol.h"
 #include "unievent.h"
-#include "ittnotify.h"
+#include "ittnotify.h" // Need this for __itt_task_begin and __itt_task_end
 
-// --- Callback typedefs to match what tracer.h expects ---
+// Use callbacks for logging (need to keep this so itt_collector.h works)
 typedef void (*OnIttLoggingCallback)(const char *name, uint64_t start_ts, uint64_t end_ts, IttArgs* metadata_args);
 typedef void (*OnMpiLoggingCallback)(const char *name, uint64_t start_ts, uint64_t end_ts, size_t src_size, int src_location, int src_tag,
                                      size_t dst_size, int dst_location, int dst_tag);
