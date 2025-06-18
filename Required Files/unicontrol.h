@@ -41,7 +41,7 @@ class UniController{
           // Really weird way of searching if the variable is PTI_ENABLE_COLLECTION
           for (; (cursor != environ - 1) && ((env = *cursor) != nullptr); cursor--) {
             if ((env[0] == 'P') && (env[1] == 'T') && (env[2] == 'I') && (strncmp(env + 3, "_ENABLE_COLLECTION", len - 3) == 0) && (env[len] == '=')) {
-              value = (env + len + 1); 
+              value = (env + len + 1);
               break;
             }
           }
