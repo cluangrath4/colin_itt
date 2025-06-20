@@ -3,7 +3,9 @@
 #include <unistd.h>
 #include <vector>
 
-// Include the shared header file that declares the ITT API.
+// Include the shared header file that declares the ITT API
+// needed to remove implementation within the benchmark because it was causing
+// issues with overlap from our tracer
 #include "ittnotify.h"
 
 int main() {
@@ -39,8 +41,7 @@ int main() {
     
     std::cout << "Test complete. Check for trace_pid_" << getpid() << ".json" << std::endl;
     
-    // Note: The handles are allocated in the tracer. In a real-world scenario,
-    // you would also need a way to free this memory.
+    // clean up
     delete domain;
     delete task1;
     delete task2;

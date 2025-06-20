@@ -20,18 +20,13 @@
 // Use the official ITT Notify header provided by the user
 #include "ittnotify.h"
 
-// ===================================================================
-// CHANGE #1: Undefine the API macros before implementing them.
-// This is crucial because the official ittnotify.h redefines these
-// function names as macros. We need to define the actual functions.
-// ===================================================================
+// need to undefine these to avoid conflicts with the ITT API
 #undef __itt_domain_create_A
 #undef __itt_string_handle_create_A
 #undef __itt_task_begin
 #undef __itt_task_end
 
-// ... (The IttCollector class remains the same as the previous answer) ...
-// (For brevity, the IttCollector class code is omitted here, but should be included from the previous answer)
+// Forward declarations of ITT API structs
 class IttCollector {
 public:
     static IttCollector* Create() {
@@ -108,7 +103,7 @@ thread_local IttCollector::ThreadBufferWrapper IttCollector::g_thread_buffer;
 static IttCollector* itt_collector = nullptr;
 
 
-// --- ITT API Implementation ---
+// ITTAPI implementation
 extern "C" {
 
 struct TaskInfo {
@@ -132,10 +127,8 @@ void IttCollectorInit() {
     }
 }
 
-// ===================================================================
-// CHANGE #2: Properly initialize all members of the ITT structs.
-// This ensures binary compatibility with the official header.
-// ===================================================================
+
+// lets us create domains and string handles with ITT
 __itt_domain* __itt_domain_create_A(const char* name) {
     __itt_domain* d = new __itt_domain();
     d->flags = 1; // 1 means enabled

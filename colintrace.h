@@ -18,12 +18,12 @@
 #include <syscall.h>
 #endif
 
-// In standalone mode, we must include this ourselves.
+// So we can run this standalone, we need to add these
 #ifndef UNITRACE_INTEGRATION
 #include "ittnotify.h"
 #endif
 
-// --- Type Definitions for unitrace API Compatibility ---
+// For compatability
 struct IttArgs {};
 typedef void (*OnIttLoggingCallback)(const char *name, uint64_t start_ts, uint64_t end_ts, IttArgs* metadata_args);
 typedef void (*OnMpiLoggingCallback)(const char *name, uint64_t start_ts, uint64_t end_ts, size_t src_size, int src_location, int src_tag, size_t dst_size, int dst_location, int dst_tag);
@@ -31,29 +31,29 @@ typedef void (*OnMpiInternalLoggingCallback)(const char *name, uint64_t start_ts
 
 class IttCollector {
 public:
-    // --- Public API for Both Standalone and unitrace ---
+    // Create a singleton instance of IttCollector, which is the main interface for logging ITT events.
 
     // Overloaded Create() to satisfy both environments. The callback is ignored.
     static IttCollector* Create(OnIttLoggingCallback callback) { return Create(); }
     static IttCollector* Create() {
-        static IttCollector instance; // C++11 makes this thread-safe
+        static IttCollector instance;
         return &instance;
     }
 
-    // Stubs required by the unitrace API
+    // stubs so we can use it in unitrace context
     void EnableCclSummary() {}
     void EnableChromeLogging() {}
     std::string CclSummaryReport() { return ""; }
     void SetMpiCallback(OnMpiLoggingCallback callback) {}
     void SetMpiInternalCallback(OnMpiInternalLoggingCallback callback) {}
 
-    // --- Core Logging Logic (using the efficient "X" event type) ---
+    // how to log an event
     static void Log(const std::string& name, uint64_t start, uint64_t end) {
         std::stringstream ss;
         if (g_thread_buffer.needs_comma.exchange(true)) {
             ss << ",\n";
         }
-        // "X" event is a complete event with a duration, which is more efficient.
+        // X is a complete event (start, end times))
         ss << "{\"name\": \"" << name << "\", \"cat\": \"task\", \"ph\": \"X\", \"ts\": " << start
            << ", \"dur\": " << (end - start) << ", \"pid\": " << getpid()
            << ", \"tid\": " << get_my_tid() << ", \"args\": {}}";
@@ -120,21 +120,18 @@ std::atomic<FILE*> IttCollector::g_trace_file{nullptr};
 std::mutex IttCollector::g_file_mutex;
 thread_local IttCollector::ThreadBufferWrapper IttCollector::g_thread_buffer;
 
-// ===================================================================
-// STANDALONE ITT API IMPLEMENTATION
-// This entire section is disabled when compiling for unitrace integration.
-// ===================================================================
+// If UNITRACE_INTEGRATION is not defined, we are in standalone mode.
 #ifndef UNITRACE_INTEGRATION
 #if __cplusplus
 
-// --- Forward Declarations & Global Data for Standalone Mode ---
+// forward declarations of ITT API structs
 struct TaskInfo { std::string name; uint64_t start_time; };
 thread_local std::stack<TaskInfo> g_task_stack;
 static IttCollector* itt_collector = nullptr;
 static void IttCollectorInit() { if (itt_collector == nullptr) itt_collector = IttCollector::Create(); }
 static uint64_t get_the_time() { return std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::high_resolution_clock::now().time_since_epoch()).count(); }
 
-// --- Standalone ITT API Function Implementations ---
+// ITTAPI function implementations
 static __itt_domain* ITTAPI collector_domain_create(const char* name) {
     auto* d = new __itt_domain();
     d->flags = 1; d->nameA = name; d->nameW = nullptr; d->extra1 = 0; d->extra2 = nullptr; d->next = nullptr;
@@ -157,7 +154,7 @@ static void ITTAPI collector_task_end(const __itt_domain* domain) {
     IttCollector::Log(task.name, task.start_time, get_the_time());
 }
 
-// --- Global Function Pointers for LD_PRELOAD Interception ---
+// global pointers 
 extern "C" {
     __itt_domain_create_ptr__3_0_t          __itt_domain_create_ptr__3_0 = &collector_domain_create;
     __itt_string_handle_create_ptr__3_0_t   __itt_string_handle_create_ptr__3_0 = &collector_string_handle_create;
