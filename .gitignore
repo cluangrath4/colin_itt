@@ -1,0 +1,20 @@
+# Build directory
+build/
+
+# User-specific files
+.vscode/
+*.swp
+*~
+
+# macOS specific files
+.DS_Store
+
+# Compiled files and binaries
+*.o
+*.a
+*.so
+*.dll
+minibench
+
+# Trace output files
+*.json
