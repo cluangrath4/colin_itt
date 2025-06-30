@@ -3,13 +3,14 @@
 #include <vector>
 #include "ittnotify.h"
 
+// This code simulates a simple ITT test and only that.
 int main() {
     std::cout << "Starting simple ITT test..." << std::endl;
     std::cout << "Process ID: " << getpid() << std::endl;
     
-    __itt_domain* domain = __itt_domain_create_A("test.domain");
-    __itt_string_handle* task1 = __itt_string_handle_create_A("main_task");
-    __itt_string_handle* task2 = __itt_string_handle_create_A("subtask");
+    __itt_domain* domain = __itt_domain_createA("test.domain");
+    __itt_string_handle* task1 = __itt_string_handle_createA("main_task");
+    __itt_string_handle* task2 = __itt_string_handle_createA("subtask");
     
     std::cout << "Beginning main task..." << std::endl;
     __itt_task_begin(domain, __itt_null, __itt_null, task1);
