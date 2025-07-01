@@ -1,1 +1,0 @@
-/opt/aurora/24.347.0/oneapi/compiler/latest/bin/icpx -fPIC -shared -Wl,-soname,libcolintrace.so -o libcolintrace.so CMakeFiles/colintrace.dir/colintrace.cpp.o  -lpthread -ldl
