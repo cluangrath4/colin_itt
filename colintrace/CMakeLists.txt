@@ -6,8 +6,6 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 add_library(colintrace SHARED colintrace.cpp)
 
-# This makes sure that any other part of your project that uses
-# colintrace (like minibench) knows where to find the "include" directory.
 target_include_directories(colintrace PUBLIC
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/../include>
     $<INSTALL_INTERFACE:include>
