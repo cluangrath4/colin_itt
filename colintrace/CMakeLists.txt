@@ -11,4 +11,4 @@ target_include_directories(colintrace PUBLIC
     $<INSTALL_INTERFACE:include>
 )
 
-target_link_libraries(colintrace PRIVATE pthread dl)
+target_link_libraries(colintrace PRIVATE pthread)
