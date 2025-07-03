@@ -2,6 +2,7 @@ name: ColinITT Tests/Actions
 run-name: ${{ github.actor }} is running tests/actions
 
 on: [push]
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -9,16 +10,30 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      - name: Install Intel oneAPI (basekit)
+        run: |
+          wget https://registrationcenter-download.intel.com/akdlm/irc_nas/tec/19520/l_BaseKit_p_2024.0.0.49597_offline.sh
+          chmod +x l_BaseKit_p_2024.0.0.49597_offline.sh
+          sudo ./l_BaseKit_p_2024.0.0.49597_offline.sh -a -s --eula accept
+
+      - name: Set up Intel environment
+        run: echo "source /opt/intel/oneapi/setvars.sh" >> $GITHUB_ENV
+
       - name: Create build directory
         run: mkdir -p build
 
-      - name: Run CMake
-        run: cmake ..
+      - name: Run CMake with icpx
+        run: |
+          source /opt/intel/oneapi/setvars.sh
+          cmake .. -DCMAKE_C_COMPILER=icx -DCMAKE_CXX_COMPILER=icpx
         working-directory: build
 
       - name: Build with Make
-        run: make -j
+        run: |
+          source /opt/intel/oneapi/setvars.sh
+          make -j
         working-directory: build
 
       - name: Make successful
         run: echo "make successful"
+
