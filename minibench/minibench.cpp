@@ -35,3 +35,10 @@ int main() {
 
     return 0;
 }
+
+extern "C" {
+    void* __itt_domain_create_ptr__3_0 __attribute__((weak));
+    void* __itt_string_handle_create_ptr__3_0 __attribute__((weak));
+    void* __itt_task_begin_ptr__3_0 __attribute__((weak));
+    void* __itt_task_end_ptr__3_0 __attribute__((weak));
+}
