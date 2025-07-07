@@ -2,15 +2,14 @@
 #include <unistd.h>
 #include <vector>
 
-// This header declares the ITT API functions (e.g., __itt_task_begin).
-// The actual implementation will be provided by an external tracer at runtime.
+// Define this BEFORE including ittnotify.h to use direct function calls
+#define INTEL_NO_MACRO_BODY
 #include "ittnotify.h"
 
 int main() {
     std::cout << "Starting simple ITT test..." << std::endl;
     std::cout << "Process ID: " << getpid() << std::endl;
 
-    // Corrected function names for Linux.
     __itt_domain* domain = __itt_domain_create("test.domain");
     __itt_string_handle* task1 = __itt_string_handle_create("main_task");
     __itt_string_handle* task2 = __itt_string_handle_create("subtask");
