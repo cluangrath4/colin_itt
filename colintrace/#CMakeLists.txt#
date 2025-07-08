@@ -1,9 +1,0 @@
-add_library(colintrace SHARED colintrace.cpp)
-
-# This makes sure any target that links to colintrace
-# automatically gets the path to the main include directory.
-    ${PROJECT_SOURCE_DIR}/include
-)
-
-# Link to the pthreads library
-target_link_libraries(colintrace PRIVATE pthread)

@@ -1,3 +1,10 @@
+/*
+ * My attempt at making a standalone ITTAPI tracer
+ * Intercepts calls to ITTAPI with my own implenetions of functions like collector_task_begin and end
+ * When task begins, records the start time and pushes info onto local stack
+ * When task ends, calculates the total time / duration and creates a JSON trace file entry
+*/
+
 #include "colintrace.h"
 
 // Standard library headers for C++

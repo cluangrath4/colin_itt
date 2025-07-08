@@ -1,3 +1,9 @@
+/*
+ * Simple function that runs ITTAPI tasks to test functionality of tracer
+ * uses ITTAPI to define main and subtask with sleep calls to simulate work
+ * defines INTEL_NO_MACRO_BODY *before* ittnotify allowing us to hook into colintrace if we want to (to intercept ITTAPI calls)
+ * Prints to console for debugging purposes
+*/
 #include <iostream>
 #include <unistd.h>
 #include <vector>
