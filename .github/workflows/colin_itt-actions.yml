@@ -26,6 +26,14 @@ jobs:
       - name: Run minibench w. colintrace
         run: |
           LD_PRELOAD=build/colintrace/libcolintrace.so ./build/minibench/minibench
+          
+      - name: Debug trace file location
+        run: |
+          echo "Trace search output:"
+          find build -name "trace.pid_*.json"
+          echo "Full tree:"
+          find build
+
 
       - name: Compare trace output
         run: | 
