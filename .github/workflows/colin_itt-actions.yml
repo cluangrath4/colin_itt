@@ -22,3 +22,14 @@ jobs:
 
       - name: Make successful
         run: echo "make successful"
+
+      - name: Run minibench w. colintrace
+        run: |
+          LD_PRELOAD=build/colintrace/libcolintrace.so ./build/minibench/minibench
+
+      - name: Compare trace output
+        run: | 
+          TRACE=$(find build/minibench -name "trace.pid_*.json" | head -n 1)
+          echo "Comparing $TRACE with sample trace"
+          diff -u minibench/compare_trace.json "$TRACE"
+          rm -f "$TRACE"
