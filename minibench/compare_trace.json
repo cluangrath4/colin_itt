@@ -1,0 +1,4 @@
+{"traceEvents": [
+{"name": "test.domain::subtask", "cat": "task", "ph": "X", "ts": 1752514622660468, "dur": 100072, "pid": 27284, "tid": 10845785835758106277},
+{"name": "test.domain::main_task", "cat": "task", "ph": "X", "ts": 1752514622610397, "dur": 350225, "pid": 27284, "tid": 10845785835758106277}
+]}
