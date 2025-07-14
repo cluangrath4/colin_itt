@@ -29,7 +29,7 @@ jobs:
 
       - name: Compare trace output
         run: | 
-          TRACE=$(find build/minibench -name "trace.pid_*.json" | head -n 1)
+          TRACE=$(find . -name "trace.pid_*.json" | head -n 1)
           echo "Comparing $TRACE with sample trace"
           diff -u minibench/compare_trace.json "$TRACE"
           rm -f "$TRACE"
