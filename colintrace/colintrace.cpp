@@ -19,9 +19,7 @@
 #include <memory>
 #include <cstring>
 #include <unistd.h>
-#ifdef __linux__
 #include <syscall.h>
-#endif
 
 // Global trace output
 static std::ofstream* g_trace_file_ptr = nullptr;
