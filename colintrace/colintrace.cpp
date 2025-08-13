@@ -5,7 +5,6 @@
  */
 
 #include "colintrace.h"
-
 #include <iostream>
 #include <fstream>
 #include <stack>
@@ -95,24 +94,46 @@ void collector_task_end(const __itt_domain* domain) {
     }
 }
 
+// Unitrace-esque implementation so that we always return the same itt_domain pointer given domain name
 __itt_domain* collector_domain_create(const char* name) {
     if (!name) return nullptr;
+
+    std.lock_guard<std.mutex> lock(g_domain_mutex);
+
+    auto it = g_domain_map.find(name);
+    if (it != g_domain_map.end()) {
+        return it->second;
+    }
+
     __itt_domain* d = new __itt_domain();
     d->flags = 1;
     char* name_copy = new char[strlen(name) + 1];
     strcpy(name_copy, name);
     d->nameA = name_copy;
     d->nameW = nullptr;
+
+    g_domain_map[name] = d;
     return d;
 }
 
+// Unitrace-esque implementation so that we always return the same itt_string_handle pointer given string name
 __itt_string_handle* collector_string_handle_create(const char* name) {
     if (!name) return nullptr;
+
+    std::lock_guard<std::mutex> lock(g_string_handle_mutex);
+
+    auto it = g_string_handle_map.find(name);
+    if (it != g_string_handle_map.end()) {
+        return it->second;
+    }
+
     __itt_string_handle* h = new __itt_string_handle();
     char* name_copy = new char[strlen(name) + 1];
     strcpy(name_copy, name);
     h->strA = name_copy;
     h->strW = nullptr;
+
+    g_string_handle_map[name] = h;
     return h;
 }
 
